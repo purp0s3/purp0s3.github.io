@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>human self analysis</title>
         
         <style>
@@ -21,7 +21,7 @@
             }
 
             .container {
-                max-width: 444px;
+                min-width: 333px;
                 padding: 33px;
                 background-color: #000;
                 border: 2px solid #0f0;
@@ -37,16 +37,47 @@
             p {
                 font-size: 16px;
                 color: #fff;
+                text-align: left;
                 margin-bottom: 22px;
                 width: 0;
                 overflow: hidden;
-                animation: typing 1.4s steps(42);
-                animation-fill-mode: forwards;
+                white-space: nowrap;
+                animation: typing 1.2s steps(22, end) forwards;
+            }
+ 
+            p:nth-child(3) {
+                animation-delay: 1s;
             }
 
+            p:nth-child(4) {
+                animation-delay: 2.4s;
+            }
+
+            p:nth-child(4) span:first-child {
+                animation-duration: 1s;
+            }
+
+            span {
+                color: #0f0;
+                font-size: 20px;
+                animation: blink infinite;
+            }
+ 
             @keyframes typing {
+                from {
+                    width: 0;
+                }
                 to {
                    width: 100%; 
+                }
+            }
+
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
                 }
             }
 
@@ -82,7 +113,7 @@
                 width: 50vh;
                 white-space: pre;
                 color: #fff;
-                font-size: 11px;
+                font-size: 8px;
                 font-weight: bold;
             }
 
@@ -96,7 +127,9 @@
             <h1>human self analysis</h1>
             <p>this is your for yourself.</p>
             <p>the answers are not sent anywhere.</p>
-            <p>i'm doing this for fun, are you?</p>
+            <p>
+                i'm doing this for fun, are you?<span>|</span>
+            </p>
 
             <div class="button-container">
                 <a href="y/1.fun.html">
