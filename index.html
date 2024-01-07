@@ -1,156 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>purp0s3</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>human self analysis</title>
+        
+        <style>
+            body {
+                font-family: 'Courier New', monospace;
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+                color: #0f0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                position: relative;
+            }
 
-    <style>
-        body {
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #fff;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-        }
+            .container {
+                max-width: 444px;
+                padding: 33px;
+                background-color: #000;
+                border: 2px solid #0f0;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 240, 0, 0.5);
+            }
 
-        header {
-            width: 100%;
-            background-color: #000;
-            padding: 20px 10px;
-            position: fixed;
-            top: 0;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 7px 7px rgba(0, 240, 0, 0.5);
-        }
+            h1 {
+                margin-top: 0;
+                margin-bottom: 33px;
+            }
 
-        .title {
-            color: #0f0;
-            padding-left: 4vw;
-        }
-
-        nav {
-            display: flex;
-            gap: 6vh;
-            margin-left: 7vw;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .active {
-            color: #0f0;
-            font-weight: bold;
-
-        }
-
-        .test {
-            position: fixed;
-            right: 3vw;
-        }
-
-        .test a {
-            color: #0f0;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        p {
-            font-size: 16px;
-            color: #fff;
-            text-align: left;
-            margin-bottom: 22px;
-            width: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: typing 1.2s steps(22, end) forwards;
-        }
-
-        p:nth-child(3) {
-            animation-delay: 1s;
-        }
-
-        p:nth-child(3) span:first-child {
-            animation-duration: 1s;
-        }
-
-        span {
-            color: #0f0;
-            font-size: 20px;
-            animation: blink infinite;
-        }
-
-        @keyframes typing {
-            from {
+            p {
+                font-size: 16px;
+                color: #fff;
+                text-align: left;
+                margin-bottom: 22px;
                 width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 1.2s steps(22, end) forwards;
+            }
+ 
+            p:nth-child(3) {
+                animation-delay: 1s;
             }
 
-            to {
-                width: 100%;
-            }
-        }
-
-        @keyframes blink {
-            from {
-                opacity: 0;
+            p:nth-child(4) {
+                animation-delay: 2.4s;
             }
 
-            to {
-                opacity: 1;
+            p:nth-child(4) span:first-child {
+                animation-duration: 1s;
             }
-        }
 
-        .ascii {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            white-space: pre;
-            color: #fff;
-            background-color: #000;
-            font-size: 8px;
-            font-weight: bold;
-        }
+            span {
+                color: #0f0;
+                font-size: 20px;
+                animation: blink infinite;
+            }
+ 
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+                to {
+                   width: 100%; 
+                }
+            }
 
-    </style>
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
 
-</head>
+            .button-container {
+                display: flex;
+                gap: 33px;
+                justify-content: center;
+            }
 
-<body>
+            button {
+                background-color: #000;
+                color: #fff;
+                padding: 11px 22px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+            }
 
-    <header>
-        <div class="title">
-            <h1>Lucas Nascimento</h1>
+            button:hover {
+                color: #fff;
+                background-color: #090;
+            }
+
+            .no:hover {
+                background-color: #900;
+            }
+
+            .ascii {
+                position: fixed;
+                bottom: 0;
+                width: 50vh;
+                white-space: pre;
+                color: #fff;
+                font-size: 8px;
+                font-weight: bold;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>human self analysis</h1>
+            <p>this is your for yourself.</p>
+            <p>the answers are not sent anywhere.</p>
+            <p>
+                i'm doing this for fun, are you?<span>|</span>
+            </p>
+
+            <div class="button-container">
+                <a href="y/1.fun.html">
+                    <button>y</button>
+                </a>
+                <a href="https://www.google.com">
+                    <button class="no">n</button>
+                </a>
+            </div>
+
         </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Education</a>
-            <a href="#">Skills</a>
-            <a href="#">About Me</a>
-        </nav>
-        <div class="test">
-            <a href="test project/index.html">Test Project</a>
-        </div>
-    </header>
 
-    <div class="ascii">
-                               _______         ________
-     ______  __ _______________ \   _  \   _____\_____  \
-     \____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
-      |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
-      |   __/|____/ |__|  |   __/ \_____  /____  >______  /
-     |__|                |__|          \/     \/       \/
-    </div>
+        <div class="ascii">
+                           _______         ________
+ ______  __ _______________ \   _  \   _____\_____  \
+ \____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
+  |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
+  |   __/|____/ |__|  |   __/ \_____  /____  >______  /
+ |__|                |__|          \/     \/       \/
+          </div>
 
-</body>
+    </body>
 
 </html>
