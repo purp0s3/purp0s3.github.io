@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>human self analysis</title>
+        
+        <style>
+            body {
+                font-family: 'Courier New', monospace;
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+                color: #0f0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            .container {
+                min-width: 333px;
+                padding: 33px;
+                background-color: #000;
+                border: 2px solid #0f0;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 240, 0, 0.5);
+            }
+
+            h1 {
+                margin-top: 0;
+                margin-bottom: 33px;
+            }
+
+            p {
+                font-size: 16px;
+                color: #fff;
+                text-align: left;
+                margin-bottom: 22px;
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 1.2s steps(22, end) forwards;
+            }
+ 
+            p:nth-child(3) {
+                animation-delay: 1s;
+            }
+
+            p:nth-child(4) {
+                animation-delay: 2.4s;
+            }
+
+            p:nth-child(4) span:first-child {
+                animation-duration: 1s;
+            }
+
+            span {
+                color: #0f0;
+                font-size: 20px;
+                animation: blink infinite;
+            }
+ 
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+                to {
+                   width: 100%; 
+                }
+            }
+
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .button-container {
+                display: flex;
+                gap: 33px;
+                justify-content: center;
+            }
+
+            button {
+                background-color: #000;
+                color: #fff;
+                padding: 11px 22px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            button:hover {
+                color: #fff;
+                background-color: #090;
+            }
+
+            .no:hover {
+                background-color: #900;
+            }
+
+            .home {
+                position: fixed;
+                top: 0;
+                padding: 33px 10px;
+                font-size: 18px;
+                font-weight: bold;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            .ascii {
+                position: fixed;
+                bottom: 0;
+                width: 50vh;
+                white-space: pre;
+                color: #fff;
+                font-size: 8px;
+                font-weight: bold;
+            }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <div class="home"><a href="../index.html">home</a></div>
+
+        <div class="container">
+            <h1>human self analysis</h1>
+            <p>this is your for yourself.</p>
+            <p>the answers are not sent anywhere.</p>
+            <p>
+                i'm doing this for fun, are you?<span>|</span>
+            </p>
+
+            <div class="button-container">
+                <a href="y/1.fun.html">
+                    <button>y</button>
+                </a>
+                <a href="https://www.google.com">
+                    <button class="no">n</button>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="ascii">
+                           _______         ________
+ ______  __ _______________ \   _  \   _____\_____  \
+ \____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
+  |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
+  |   __/|____/ |__|  |   __/ \_____  /____  >______  /
+ |__|                |__|          \/     \/       \/
+          </div>
+
+    </body>
+
+</html>
