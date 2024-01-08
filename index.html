@@ -35,6 +35,13 @@
                 padding-left: 4vw;
             }
 
+            .title h1 {
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 1s steps(20, end) forwards;
+            }
+
             .title span {
                 color: #0f0;
                 font-size: 28px;
@@ -60,7 +67,8 @@
             }
 
             .active {
-                color: #0f0;
+                text-decoration: underline;
+                text-decoration-color: #0f0; 
             }
 
             .active:hover {
@@ -75,7 +83,7 @@
             }
 
             .test a {
-                color: #0f0;
+                color: #f00;
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: bold;
@@ -106,12 +114,15 @@
                 position: fixed;
                 bottom: 0;
                 width: 100%;
-                white-space: pre;
                 color: #fff;
                 background-color: #000;
                 font-size: 8px;
                 font-weight: bold;
                 box-shadow: 0 0 4px 4px rgba(0, 240, 0, 0.5);
+            }
+
+            .ascii a {
+                white-space: pre;
             }
 
             /* animations */
@@ -136,144 +147,100 @@
 
             /* media queries */
 
-            /* mobile general */
-            @media only screen 
-                and (max-width: 600px) {
-                    header {
-                        padding: 0px;
-                        margin-inline-start: auto;
-                        position: fixed;
-                        top: 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        box-shadow: 0 4px 4px rgba(0, 240, 0, 0.5);
-                    }
+            /* iPhone Retina */ 
+            @media only screen and (min-width : 320px) and (max-width : 429px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
 
-                    nav {
-                        display: inline-block;
-                        padding: 5px;
-                    }
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
 
-                    nav a {
-                        color: #fff;
-                        text-decoration: none;
-                        font-size: 16px;
-                        margin: 0.7vh;
-                        font-weight: bold;
-                        line-height: 1.4;
-                    }
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
 
-                    .test {
-                        position: fixed;
-                        top: 5.5rcap;
-                        right: 0;
-                    }
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
 
-                    .test a {
-                        color: #900;
-                        text-decoration: none;
-                        font-size: 15px;
-                        font-weight: bold;
-                    }
-
-                    .ascii {
-                        display: flex;
-                        float: center;
-                        padding-left: 5vh;
-                    }
-
-            }
-             
-            /*    1179×2556 pixels at 460ppi
-                iPhone 14 Pro, iPhone 15 and iPhone 15 Pro
-            */
-            @media only screen 
-                and (width: 393px) 
-                and (height: 852px) 
-                and (-webkit-device-pixel-ratio: 3) { 
-
+                .test a {
+                    font-size: 15px;
+                }
             }
 
-            /* 
-                1284×2778 pixels at 460ppi 
-                iPhone 14 Pro Max, iPhone 15 Plus and iPhone 15 Pro Max
-            */
-            @media only screen 
-                and (width: 430px) 
-                and (height: 932px) 
-                and (-webkit-device-pixel-ratio: 3) { 
+            /* General Phones */ 
+            @media only screen and (min-width : 430px) and (max-width : 767px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
 
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
             }
 
-            /* 
-                1170×2532 pixels at 460ppi 
-                iPhone 12, iPhone 12 Pro, iPhone 13, iPhone 13 Pro, and iPhone 14
-            */
-            @media only screen 
-                and (width: 390px) 
-                and (height: 844px) 
-                and (-webkit-device-pixel-ratio: 3) { 
-                    .ascii {
-                        display: flex;
-                        float: center;
-                        padding-left: 9vh;
-                    }
+            /* Tablets */
+            @media only screen and (min-width : 768px) and (max-width : 991px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 10px;
+                }
+
+                nav a {
+                    font-size: 18px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2cap;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
             }
 
-            /* 
-                1284×2778 pixels at 458ppi 
-                iPhone 12 Pro Max, iPhone 13 Pro Max, and iPhone 14 Plus
-            */
-            @media only screen 
-                and (width: 428px) 
-                and (height: 926px) 
-                and (-webkit-device-pixel-ratio: 3) { 
+            /* Desktops */
+            @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
             }
 
-            /* 
-                1080×2340 pixels at 476ppi 
-                iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 Mini, and iPhone 13 Mini
-            */
-            @media only screen 
-                and (width: 375px) 
-                and (height: 812px) 
-                and (-webkit-device-pixel-ratio: 3) { 
-                
-            }
-
-            /* 
-                828×1792 pixels at 326ppi 
-                iPhone XR, and iPhone 11
-            */
-            @media only screen 
-                and (width: 414px) 
-                and (height: 896px) 
-                and (-webkit-device-pixel-ratio: 2) { 
-
-            }
-
-            /* 
-                1242×2688 pixels at 458ppi 
-                iPhone Xs Max, and iPhone 11 Pro Max
-            */
-            @media only screen 
-                and (width: 414px) 
-                and (height: 896px) 
-                and (-webkit-device-pixel-ratio: 3) { 
-
-            }
-
-            /* 
-                750×1334 pixels at 326ppi 
-                iPhone 7, iPhone 8, and iPhone SE (1st to 3rd gen)
-            */
-            @media only screen 
-                and (width: 375px) 
-                and (height: 667px) 
-                and (-webkit-device-pixel-ratio: 2) { 
+            /* Wide Screens */
+            @media only screen and (min-width : 1200px) {
 
             }
 
@@ -288,23 +255,26 @@
             </div>
             <nav>
                 <a href="index.html" class="active">Home</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Education</a>
-                <a href="#">Skills</a>
-                <a href="#">About Me</a>
+                <a href="stuff/portfolio.html">Portfolio</a>
+                <a href="stuff/education.html">Education</a>
+                <a href="stuff/skills.html">Skills</a>
+                <a href="stuff/aboutme.html">About Me</a>
             </nav>
             <div class="test">
-                <a href="test project/index.html">Test Project</a>
+                <a href="test project/index.html">test</a>
             </div>
         </header>
     
         <div class="ascii">
-                                   _______         ________
-         ______  __ _______________ \   _  \   _____\_____  \
-         \____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
-          |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
-          |   __/|____/ |__|  |   __/ \_____  /____  >______  /
-         |__|                |__|          \/     \/       \/
+            <a>                                
+                          _______         ________
+______  __ _______________ \   _  \   _____\_____  \
+\____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
+ |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
+ |   __/|____/ |__|  |   __/ \_____  /____  >______  /
+|__|                |__|          \/     \/       \/
+
+            </a> 
         </div>
     
     </body>
