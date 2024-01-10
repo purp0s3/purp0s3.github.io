@@ -7,6 +7,7 @@
         <title>purp0s3</title>
 
         <style>
+            
             body {
                 font-family: 'Courier New', monospace;
                 margin: 0;
@@ -95,23 +96,25 @@
 
             .intro {
                 display: flex;
-                position: fixed;
+                position: relative;
+                top: 18vh;
                 left: 14%;
                 align-items: center;
                 justify-content: flex-start;
-                height: calc(50vh - 80px);
                 padding: 42px;
+                width: 100%;
+                z-index: 1;
             }
 
             .intro img {
                 max-height: 444px;
-                margin-top: 50vh;
+                margin-top: 1dvh;
                 margin-right: 20px;
                 border-radius: 50%;
             }
 
             .text {
-                margin-top: 50vh;
+                margin-top: 1dvh;
                 text-align: left;
             }
 
@@ -147,14 +150,16 @@
             }
 
             .text h3 {
+                font-size: 1.4em;
                 animation: typing 1.7s steps(77, end) forwards;
                 animation-delay: 2.4s;
                 margin-top: 10px;
             }
 
             .text h4 {
-                animation: typing 1.7s steps(42, end) forwards;
-                animation-delay: 3.2s;
+                font-size: 1.2rem;
+                animation: typing 2s steps(42, end) forwards;
+                animation-delay: 3.6s;
                 margin-top: 10px;
             }
 
@@ -184,6 +189,7 @@
                 white-space: pre;
             }
 
+
             /* animations */
 
             @keyframes typing {
@@ -204,9 +210,10 @@
                 }
             }
 
+
             /* media queries */
 
-            /* iPhone Retina */ 
+/* iPhone Retina */ 
             @media only screen and (min-width : 320px) and (max-width : 429px) {
                 header {
                     padding: 0px;
@@ -236,14 +243,21 @@
 
                 .intro {
                     display: flex;
+                    position: fixed;
+                    left: 0;
                     align-items: center;
+                    -webkit-box-align: center;
                     justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
                     height: calc(50vh - 80px);
                 }
 
                 .intro img {
                     position: fixed;
                     top: 11vh;
+                    left: 25%;
                     max-height: 177px;
                     margin-top: 11vh;
                     margin-right: 20px;
@@ -252,18 +266,33 @@
 
                 .text {
                     position: fixed;
-                    top: 1dvh;
+                    top: 7vh;
                     left: 1vh;
                     text-align: left;
-                    font-size: 1cap;
+                    font-size: 0.5em;
+                    margin-top: 40vh;
                 }
 
                 .text h2 {
-                    font-size: 1.1rcap;
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.77rem;
+                }
+
+                .text h4 {
+                    font-size: 1rem;
+                    line-height: 0.77;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
                 }
             }
 
-            /* General Phones */ 
+
+/* General Phones */ 
             @media only screen and (min-width : 430px) and (max-width : 767px) {
                 header {
                     padding: 0px;
@@ -293,14 +322,20 @@
 
                 .intro {
                     display: flex;
+                    position: fixed;
                     align-items: center;
+                    -webkit-box-align: center;
                     justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
                     height: calc(50vh - 80px);
                 }
 
                 .intro img {
                     position: fixed;
                     top: 11vh;
+                    left: 25%;
                     max-height: 177px;
                     margin-top: 11vh;
                     margin-right: 20px;
@@ -309,14 +344,26 @@
 
                 .text {
                     position: fixed;
-                    top: 1dvh;
+                    top: 42vh;
                     left: 1vh;
                     text-align: left;
-                    font-size: 1cap;
+                    font-size: 0.5em;
                 }
 
                 .text h2 {
-                    font-size: 1.1rcap;
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 1rem;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
                 }
             }
 
@@ -330,26 +377,72 @@
 
                 nav {
                     display: inline-block;
-                    padding: 10px;
+                    padding: 5px;
                 }
 
                 nav a {
-                    font-size: 18px;
+                    font-size: 16px;
                     margin: 0.7vh;
                     line-height: 1.4;
                 }
 
                 .test {
                     position: fixed;
-                    top: 10.2cap;
+                    top: 10.2rcap;
                 }
 
                 .test a {
                     font-size: 15px;
                 }
+
+                .intro {
+                    display: flex;
+                    position: fixed;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
+                    height: calc(50vh - 80px);
+                }
+
+                .intro img {
+                    position: fixed;
+                    top: 11vh;
+                    left: 27vh;
+                    max-height: 177px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 42vh;
+                    left: 20vh;
+                    text-align: left;
+                    font-size: 0.5em;
+                }
+
+                .text h2 {
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 1rem;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
+                }
             }
 
-            /* Large Tablets */
+
+/* Large Tablets */
             @media only screen and (min-width : 992px) and (max-width : 1199px) {
                 header {
                     padding: 0px;
@@ -378,8 +471,21 @@
                 }
             }
 
-            /* Wide Screens */
+
+/* Wide Screens */
             @media only screen and (min-width : 1200px) {
+
+            }
+
+
+/* Retina Macs */
+            @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (   min--moz-device-pixel-ratio: 2),
+                only screen and (     -o-min-device-pixel-ratio: 2/1),
+                only screen and (        min-device-pixel-ratio: 2),
+                only screen and (                min-resolution: 192dpi),
+                only screen and (                min-resolution: 2dppx) { 
 
             }
 
@@ -388,10 +494,13 @@
     </head>
 
     <body>
+
         <header>
+
             <div class="title">
                 <h1>$ purp0s3<span>|</span></h1>
             </div>
+
             <nav>
                 <a href="index.html" class="active">Home</a>
                 <a href="stuff/portfolio.html">Portfolio</a>
@@ -399,38 +508,46 @@
                 <a href="stuff/skills.html">Skills</a>
                 <a href="stuff/aboutme.html">About Me</a>
             </nav>
+            
             <div class="test">
                 <a href="test project/index.html">test</a>
             </div>
+
         </header>
 
         <div class="intro">
+
             <img src="stuff/imgs/devpic.JPG" alt="a picture of me">
+            
             <div class="text">
-                <h1>Hey there,<br>I'm Lucas Nascimento.</h1>
+                <h1>Hey there,</h1><h1>I'm Lucas Nascimento.</h1>
                 <h2>I'm an IT student into development and programming.</h2>
-                <br><h3>
+                <br>
+                <h3>
                     status:
                         <a href="https://github.com/purp0s3?tab=repositories">
                             fundamentally human, beginner developer.
-                        </a><br>
+                        </a>
+                        <br>
                     </h3>
                     <h3>location:
                         <a href="https://en.wikipedia.org/wiki/Brazil">
                             Brazil, Earth, Sun, Milky Way.
-                        </a><br>
+                        </a>
+                        <br>
                     </h3>
                     <h3>contact:
                         <a href="mailto:purp0s3@icloud.com">
                             purp0s3@icloud.com
                         </a>
                     </h3>
-                </h3><br>
+                </h3>
                 <h4>
                     <a href="https://raw.githubusercontent.com/purp0s3/purp0s3/main/untitled/looking.txt">
-                    this is my place.</a>
+                    this is my place
+                    </a>
                     <p> welcome.<span>|</span></p>
-                </h4>    
+                </h4>      
             </div>
         </div>
     
