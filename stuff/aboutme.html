@@ -1,1 +1,541 @@
-404
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>purp0s3</title>
+
+        <style>
+            
+            body {
+                font-family: 'Courier New', monospace;
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+
+            header {
+                width: 100%;
+                background-color: #000;
+                padding: 20px 10px;
+                position: fixed;
+                top: 0;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 2px 2px rgba(0, 240, 0, 0.5);
+            }
+
+            .title {
+                color: #0f0;
+                padding-left: 4vw;
+            }
+
+            .title {
+                color: #0f0;
+                padding-left: 4vw;
+            }
+
+            .title h1 {
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 0.5s steps(20, end) forwards;
+            }
+
+            .title span {
+                color: #0f0;
+                font-size: 32px;
+                animation: blink infinite;
+                animation-duration: 1s;
+            }
+
+            nav {
+                display: flex;
+                gap: 6vh;
+                margin-left: 6vw;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            nav a:hover {
+                color: #090;
+            }
+
+            .active {
+                text-decoration: underline;
+                text-decoration-color: #0f0; 
+            }
+
+            .active:hover {
+                color: #090;
+                text-decoration: line-through;
+                text-decoration-color: #900;
+            }
+
+            .test {
+                position: fixed;
+                right: 3vw;
+            }
+
+            .test a {
+                color: #f00;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            .test a:hover {
+                color: #900;
+            }
+
+            .about {
+                display: flex;
+                position: relative;
+                top: 18vh;
+                left: 14%;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 42px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .about img {
+                max-height: 444px;
+                margin-top: 1dvh;
+                margin-right: 20px;
+                border-radius: 50%;
+            }
+
+            .about img:hover {
+                animation: blink;
+                animation-duration: 1s;
+            }
+
+            .text {
+                margin-top: 1dvh;
+                text-align: center;
+            }
+
+            .text a {
+                color: #000;
+            }
+
+            .text p {
+                color: #000;
+            }
+
+            .text span {
+                color: #000;
+            }
+
+            .text h2 {
+                margin-top: 10px;
+            }
+
+            .text h3 {
+                font-size: 1.4em;
+                margin-top: 10px;
+            }
+
+            .text h4 {
+                font-size: 1.2rem;
+                margin-top: 10px;
+            }
+
+            span {
+                color: #0f0;
+                font-size: 20px;
+                animation: blink infinite;
+            }
+
+            .ascii {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                color: #fff;
+                background-color: #000;
+                font-size: 8px;
+                font-weight: bold;
+                box-shadow: 0 0 2px 2px rgba(0, 240, 0, 0.5);
+            }
+
+            .ascii a {
+                color: #fff;
+                white-space: pre;
+            }
+
+
+/* animations */
+
+            @keyframes typing {
+                            from {       
+                                width: 0;
+                            }
+                            to {
+                                width: 100%;
+                            }
+                        }
+
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+
+/* media queries */
+
+/* iPhone Retina */ 
+            @media only screen and (min-width : 320px) and (max-width : 429px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
+
+                .about {
+                    display: flex;
+                    position: fixed;
+                    left: 0;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
+                    height: calc(50vh - 80px);
+                }
+
+                .about img {
+                    position: fixed;
+                    top: 11vh;
+                    left: 27vw;
+                    max-height: 177px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    position: fixed;
+                    left: 1vw;
+                    font-size: 0.5em;
+                    margin-top: 40vh;
+                }
+
+                .text h2 {
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 0.8rem;
+                    line-height: 0.7;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
+                }
+            }
+
+
+/* General Phones */ 
+            @media only screen and (min-width : 430px) and (max-width : 767px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
+
+                .about {
+                    display: flex;
+                    position: fixed;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
+                    height: calc(50vh - 80px);
+                }
+
+                .about img {
+                    position: fixed;
+                    top: 11vh;
+                    left: 30vw;
+                    max-height: 177px;
+                    margin-top: 11vh;
+                    margin-right: 20px;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 42vh;
+                    left: 1vh;
+                    font-size: 0.5em;
+                }
+
+                .text h2 {
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 1rem;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
+                }
+            }
+
+/* Tablets */
+            @media only screen and (min-width : 768px) and (max-width : 991px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 7vh;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
+
+                .about {
+                    display: flex;
+                    position: fixed;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    justify-content: flex-start;
+                    -webkit-box-direction: flex-start;
+                    -webkit-box-pack: flex-start;
+                    width: 100%;
+                    height: calc(50vh - 80px);
+                }
+
+                .about img {
+                    position: fixed;
+                    top: 7vh;
+                    left: 30vw;
+                    max-height: 333px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 50vh;
+                    left: 1vw;
+                    font-size: 1em;
+                }
+
+                .text h2 {
+                    font-size: 1.3em;
+                }
+
+                .text h3 {
+                    font-size: 1.2em;
+                }
+
+                .text h4 {
+                    font-size: 1.5em;
+                }
+
+                .text span {
+                    font-size: 1.3em;
+                }
+            }
+
+
+/* Large Tablets */
+            @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 10px;
+                }
+
+                nav a {
+                    font-size: 18px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2cap;
+                }
+
+                .test a {
+                    font-size: 15px;
+                }
+            }
+
+
+/* Wide Screens */
+            @media only screen and (min-width : 1200px) {
+
+            }
+
+
+/* Retina Macs */
+            @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (   min--moz-device-pixel-ratio: 2),
+                only screen and (     -o-min-device-pixel-ratio: 2/1),
+                only screen and (        min-device-pixel-ratio: 2),
+                only screen and (                min-resolution: 192dpi),
+                only screen and (                min-resolution: 2dppx) { 
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="title">
+                <h1>$ purp0s3<span>|</span></h1>
+            </div>
+
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="education.html">Education</a>
+                <a href="skills.html">Skills</a>
+                <a href="aboutme.html" class="active">About Me</a>
+            </nav>
+            
+            <div class="test">
+                <a href="../test project/index.html">test</a>
+            </div>
+
+        </header>
+
+        <div class="about">
+            
+            <img src="../stuff/imgs/profile.jpg" alt="default profile picture"></a>
+            
+            <div class="text">
+                <h1>You know my name.</h1>
+                <h2>My purpose is to develop.<br> 
+                    I'm always willing to learn more.</h2>
+                <h3>    <a>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a><br>
+                    </h3>
+                    <h3><a>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a><br>
+                    </h3>
+                    <h3><a>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a>
+                    </h3>
+                </h3>
+                <h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </h4>      
+            </div>
+        </div>
+    
+        <div class="ascii">
+            <a>                                
+                          _______         ________
+______  __ _______________ \   _  \   _____\_____  \
+\____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
+ |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
+ |   __/|____/ |__|  |   __/ \_____  /____  >______  /
+|__|                |__|          \/     \/       \/
+
+            </a> 
+        </div>
+    
+    </body>
+
+</html>
