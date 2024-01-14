@@ -36,11 +36,6 @@
                 padding-left: 4vw;
             }
 
-            .title {
-                color: #0f0;
-                padding-left: 4vw;
-            }
-
             .title h1 {
                 width: 0;
                 overflow: hidden;
@@ -91,7 +86,7 @@
             .test a {
                 color: #f00;
                 text-decoration: none;
-                font-size: 16px;
+                font-size: 1.1em;
                 font-weight: bold;
             }
 
@@ -99,12 +94,29 @@
                 color: #900;
             }
 
+            .flags {
+                position: fixed;
+                top: 1vh;
+                right: 1.5vw;
+            }
+
+            .flags img {
+                max-height: 27px;
+            }
+
+            .flags img:hover {
+                opacity: 75%;
+            }
+
             .about {
                 display: flex;
                 position: fixed;
                 top: 18vh;
                 align-items: center;
+                -webkit-box-align: center;
                 justify-content: center;
+                -webkit-box-direction: center;
+                -webkit-box-pack: center;
                 padding: 42px;
                 width: 100%;
                 z-index: 1;
@@ -167,13 +179,13 @@
 /* animations */
 
             @keyframes typing {
-                            from {       
-                                width: 0;
-                            }
-                            to {
-                                width: 100%;
-                            }
-                        }
+                from {       
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
 
             @keyframes blink {
                 from {
@@ -197,13 +209,23 @@
 
                 nav {
                     display: inline-block;
-                    padding: 5px;
+                    padding: 10px;
                 }
 
                 nav a {
-                    font-size: 16px;
+                    font-size: 1.5em;
                     margin: 0.7vh;
                     line-height: 1.4;
+                }
+
+                .flags {
+                    position: fixed;
+                    top: 1vh;
+                    right: 1.5vw;
+                }
+
+                .flags img {
+                    max-height: 18px;
                 }
 
                 .test {
@@ -212,19 +234,11 @@
                 }
 
                 .test a {
-                    font-size: 15px;
+                    font-size: 1em;
                 }
 
                 .about {
-                    display: flex;
-                    position: fixed;
                     left: 0;
-                    align-items: center;
-                    -webkit-box-align: center;
-                    justify-content: center;
-                    -webkit-box-direction: center;
-                    -webkit-box-pack: center;
-                    width: 100%;
                     height: 20vh;
                 }
 
@@ -232,16 +246,16 @@
                     position: fixed;
                     left: 1vw;
                     right: 1vw;
-                    font-size: 0.5em;
+                    font-size: 0.7em;
                     margin-top: 40vh;
                 }
 
                 .text h2 {
-                    font-size: 0.7rem;
+                    font-size: 1rem;
                 }
 
                 .text h3 {
-                    font-size: 0.7rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -265,6 +279,16 @@
                     line-height: 1.4;
                 }
 
+                .flags {
+                    position: fixed;
+                    top: 1vh;
+                    right: 1.5vw;
+                }
+
+                .flags img {
+                    max-height: 22px;
+                }
+
                 .test {
                     position: fixed;
                     top: 10.2rcap;
@@ -275,32 +299,24 @@
                 }
 
                 .about {
-                    display: flex;
-                    position: fixed;
                     left: 0;
-                    align-items: center;
-                    -webkit-box-align: center;
-                    justify-content: center;
-                    -webkit-box-direction: center;
-                    -webkit-box-pack: center;
-                    width: 100%;
                     height: 20vh;
                 }
 
                 .text {
                     position: fixed;
-                    top: 42vh;
                     left: 1vw;
                     right: 1vw;
                     font-size: 0.7em;
+                    margin-top: 40vh;
                 }
 
                 .text h2 {
-                    font-size: 0.7rem;
+                    font-size: 1rem;
                 }
 
                 .text h3 {
-                    font-size: 0.7rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -318,7 +334,7 @@
                 }
 
                 nav a {
-                    font-size: 16px;
+                    font-size: 18px;
                     margin: 0.7vh;
                     line-height: 1.4;
                 }
@@ -329,19 +345,11 @@
                 }
 
                 .test a {
-                    font-size: 15px;
+                    font-size: 1.2em;
                 }
 
                 .about {
-                    display: flex;
-                    position: fixed;
                     left: 0;
-                    align-items: center;
-                    -webkit-box-align: center;
-                    justify-content: center;
-                    -webkit-box-direction: center;
-                    -webkit-box-pack: center;
-                    width: 100%;
                 }
 
                 .text {
@@ -376,7 +384,7 @@
                 }
 
                 nav a {
-                    font-size: 18px;
+                    font-size: 1.5em;
                     margin: 0.7vh;
                     line-height: 1.4;
                 }
@@ -387,24 +395,17 @@
                 }
 
                 .test a {
-                    font-size: 15px;
+                    font-size: 1.3em;
                 }
 
                 .about {
-                    display: flex;
-                    position: fixed;
                     left: 0;
-                    align-items: center;
-                    -webkit-box-align: center;
-                    justify-content: center;
-                    -webkit-box-direction: center;
-                    -webkit-box-pack: center;
-                    width: 100%;
                     height: 20vh;
                 }
 
                 .text {
                     position: fixed;
+                    top: 20vh;
                     left: 1vw;
                     right: 1vw;
                     font-size: 1.2em;
@@ -456,6 +457,11 @@
                 <a href="skills.html">Skills</a>
                 <a href="aboutme.html" class="active">About Me</a>
             </nav>
+
+            <div class="flags">
+                <a href="../stuff/pt/index.html"><img src="../stuff/imgs/brazil.png" alt="Brazilian flag"></a>
+                <a href="../stuff/es/index.html"><img src="../stuff/imgs/spain.png" alt="Spanish flag"></a>
+            </div>
             
             <div class="test">
                 <a href="../test project/index.html">test</a>
@@ -472,12 +478,12 @@
                 </h2><br>
                 <h3>
                     <a>
-                        Programming is what I'm interested in.
+                        Programming is what I'm interested in, it motivates me.
                     </a><br>
                 </h3>
                 <h3>
                     <a>
-                    No matter what language, framework, system, if it exists it can be learnt.
+                    No matter what language, framework, system. If it exists it can be learnt.
                     </a><br>
                 </h3>
                 <h3>

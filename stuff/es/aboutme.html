@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>purp0s3</title>
+        <title>purp0s3 - sobre mí</title>
 
         <style>
             
@@ -108,35 +108,27 @@
                 opacity: 75%;
             }
 
-            .intro {
+            .about {
                 display: flex;
                 position: fixed;
                 top: 18vh;
-                left: 14%;
                 align-items: center;
                 -webkit-box-align: center;
-                justify-content: flex-start;
-                -webkit-box-direction: flex-start;
-                -webkit-box-pack: flex-start;
+                justify-content: center;
+                -webkit-box-direction: center;
+                -webkit-box-pack: center;
                 padding: 42px;
                 width: 100%;
                 z-index: 1;
             }
 
-            .intro img {
-                max-height: 444px;
-                margin-top: 1dvh;
-                margin-right: 20px;
-                border-radius: 50%;
-            }
-
             .text {
                 margin-top: 1dvh;
-                text-align: left;
+                text-align: center;
             }
 
             .text a {
-                color: #090;
+                color: #000;
             }
 
             .text p {
@@ -147,55 +139,23 @@
                 color: #000;
             }
 
-            .easter {
-                opacity: 0;
-            }
-
-            .easter:hover {
-                opacity: 1;
-            }
-
-            .text h1,
-            .text h2,
-            .text h3,
-            .text h4 {
-                width: 0;
-                overflow: hidden;
-                white-space: nowrap;
-            }
-
-            .text h1 {
-                animation: typing 1.2s steps(42, end) forwards;
-            }
-
             .text h2 {
-                animation: typing 1.7s steps(42, end) forwards;
-                animation-delay: 1.2s;
                 margin-top: 10px;
             }
 
             .text h3 {
                 font-size: 1.4em;
-                animation: typing 1.7s steps(77, end) forwards;
-                animation-delay: 2.4s;
                 margin-top: 10px;
             }
 
             .text h4 {
-                font-size: 1.4rem;
-                animation: typing 2s steps(42, end) forwards;
-                animation-delay: 3.6s;
+                font-size: 1.2rem;
                 margin-top: 10px;
-            }
-
-            .text span {
-                color: #000;
-                animation-duration: 1s;
             }
 
             span {
                 color: #0f0;
-                font-size: 1.6rem;
+                font-size: 20px;
                 animation: blink infinite;
             }
 
@@ -277,44 +237,25 @@
                     font-size: 1em;
                 }
 
-                .intro {
+                .about {
                     left: 0;
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 27vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
-                    top: 7vh;
-                    left: 1vh;
-                    text-align: left;
-                    font-size: 0.5em;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 0.7em;
                     margin-top: 40vh;
                 }
 
                 .text h2 {
-                    font-size: 0.7rem;
+                    font-size: 1rem;
                 }
 
                 .text h3 {
-                    font-size: 0.7rem;
-                }
-
-                .text h4 {
-                    font-size: 0.8rem;
-                    line-height: 0.7;
-                }
-
-                .text span {
-                    font-size: 1.3rem;
+                    font-size: 0.9rem;
                 }
             }
 
@@ -354,45 +295,28 @@
                 }
 
                 .test a {
-                    font-size: 1.1em;
+                    font-size: 15px;
                 }
 
-                .intro {
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 30vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    margin-right: 20px;
-                    border-radius: 50%;
+                .about {
+                    left: 0;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
-                    top: 42vh;
-                    left: 1vh;
-                    text-align: left;
-                    font-size: 0.5em;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 0.7em;
+                    margin-top: 40vh;
                 }
 
                 .text h2 {
-                    font-size: 0.7rem;
-                }
-
-                .text h3 {
-                    font-size: 0.7rem;
-                }
-
-                .text h4 {
                     font-size: 1rem;
                 }
 
-                .text span {
-                    font-size: 1.3rem;
+                .text h3 {
+                    font-size: 0.9rem;
                 }
             }
 
@@ -424,41 +348,24 @@
                     font-size: 1.2em;
                 }
 
-                .intro {
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 7vh;
-                    left: 30vw;
-                    max-height: 333px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
+                .about {
+                    left: 0;
                 }
 
                 .text {
                     position: fixed;
-                    top: 50vh;
-                    left: 10vw;
-                    text-align: left;
+                    top: 20vh;
+                    left: 1vw;
+                    right: 1vw;
                     font-size: 1em;
                 }
 
                 .text h2 {
-                    font-size: 1.3em;
+                    font-size: 2rem;
                 }
 
                 .text h3 {
-                    font-size: 1.3em;
-                }
-
-                .text h4 {
-                    font-size: 1.5em;
-                }
-
-                .text span {
-                    font-size: 1.3em;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -491,41 +398,24 @@
                     font-size: 1.3em;
                 }
 
-                .intro {
+                .about {
                     left: 0;
-                    height: 50vh;
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 7vh;
-                    left: 30vw;
-                    max-height: 400px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
-                    top: 50vh;
-                    left: 10vw;
-                    text-align: left;
-                    font-size: 1em;
+                    top: 20vh;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 1.2em;
                 }
 
                 .text h2 {
-                    font-size: 1.8em;
+                    font-size: 1.5em;
                 }
 
                 .text h3 {
-                    font-size: 1.7em;
-                }
-
-                .text h4 {
-                    font-size: 2em;
-                }
-
-                .text span {
                     font-size: 1.5em;
                 }
             }
@@ -561,57 +451,61 @@
             </div>
 
             <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="stuff/portfolio.html">Portfolio</a>
-                <a href="stuff/education.html">Education</a>
-                <a href="stuff/skills.html">Skills</a>
-                <a href="stuff/aboutme.html">About Me</a>
+                <a href="index.html">Inicio</a>
+                <a href="portfolio.html">Portafolio</a>
+                <a href="education.html">Educación</a>
+                <a href="skills.html">Conocimientos</a>
+                <a href="aboutme.html" class="active">Sobre Mí</a>
             </nav>
 
             <div class="flags">
-                <a href="stuff/pt/index.html"><img src="stuff/imgs/brazil.png" alt="Brazilian flag"></a>
-                <a href="stuff/es/index.html"><img src="stuff/imgs/spain.png" alt="Spanish flag"></a>
+                <a href="../pt/index.html"><img src="../imgs/brazil.png" alt="Bandera de Brasil"></a>
+                <a href="../../index.html"><img src="../imgs/united states.png" alt="Bandera de los Estados Unidos"></a>
             </div>
             
             <div class="test">
-                <a href="test project/index.html">test</a>
+                <a href="../../test project/index.html">test</a>
             </div>
 
         </header>
 
-        <div class="intro">
-
-            <a href="untitled/looking.html"><img src="stuff/imgs/devpic.JPG" alt="a picture of me"></a>
+        <div class="about">
             
             <div class="text">
-                <h1>Hey there,</h1><h1>I'm Lucas Nascimento.<a class="easter">purp0s3</a></h1>
-                <h2>I'm an IT student into development and programming.</h2>
-                <br>
+                <h1>Ya conoces mi nombre.</h1><br>
+                <h2>Mi propósito es desarrollar.<br> 
+                    Siempre dispuesto a aprender más.
+                </h2><br>
                 <h3>
-                    status:
-                        <a href="https://github.com/purp0s3?tab=repositories">
-                            fundamentally human, beginner developer.
-                        </a>
-                        <br>
-                    </h3>
-                    <h3>
-                        location:
-                        <a href="https://en.wikipedia.org/wiki/São_Paulo">
-                            São Paulo, Brazil, Earth, Sun, Milky Way.
-                        </a>
-                        <br>
-                    </h3>
-                    <h3>
-                        contact:
-                        <a href="mailto:purp0s3@icloud.com">
-                            purp0s3@icloud.com
-                        </a>
-                    </h3>
+                    <a>
+                    Programación es lo que me interesa, motiva, conquista.
+                    </a><br>
                 </h3>
-                <h4>
-                    <p>
-                    welcome to my place.<span>|</span></p>
-                </h4>      
+                <h3>
+                    <a>
+                    No importa el lenguaje, framework, sistema. Si existe, hay forma de aprenderlo.
+                    </a><br>
+                </h3>
+                <h3>
+                    <a>
+                    Inclinado hacia el front end pero no limitado.
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                    Panorama: jailbreak, hackintosh, tweaking y mods en general.
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                        Idiomas: Portugués Brasileño, Inglés (fluido), Español (intermedio).
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                    Windows, macOS y Linux. Diariamente. Porque no.
+                    </a>
+                </h3>     
             </div>
         </div>
     

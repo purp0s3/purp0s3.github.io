@@ -17,6 +17,27 @@
                 margin: 0;
             }
 
+            .home {
+                position: fixed;
+                top: 42px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+            }
+
+            .home a {
+                color: #fff;
+                font-size: 1.2em;
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: #090;
+                text-decoration-thickness: 2px;
+            }
+
             .ascii {
                 position: fixed;
                 top: 50%;
@@ -45,9 +66,17 @@
         }
 
         </style>
+
     </head>
 
     <body>
+
+        <div class="home">
+            <a href="https://purp0s3.github.io/">
+                go back home
+            </a>
+        </div>
+
         <div class="ascii">
 <a>
                                        _______         ________                      
