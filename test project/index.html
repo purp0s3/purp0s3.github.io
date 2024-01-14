@@ -7,6 +7,7 @@
         <title>human self analysis</title>
         
         <style>
+            
             body {
                 font-family: 'Courier New', monospace;
                 margin: 0;
@@ -18,6 +19,25 @@
                 align-items: center;
                 justify-content: center;
                 height: 100vh;
+            }
+
+            .home {
+                position: fixed;
+                top: 0;
+                padding: 33px 11px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-sizing: border-box;
+            }
+
+            .home a {
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: underline;
+                text-decoration-color: #090;
+                text-decoration-thickness: 2px;
             }
 
             .container {
@@ -62,29 +82,12 @@
                 font-size: 20px;
                 animation: blink infinite;
             }
- 
-            @keyframes typing {
-                from {
-                    width: 0;
-                }
-                to {
-                   width: 100%; 
-                }
-            }
-
-            @keyframes blink {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
 
             .button-container {
                 display: flex;
                 gap: 33px;
                 justify-content: center;
+                margin-bottom: 0.7dvh;
             }
 
             button {
@@ -107,16 +110,6 @@
                 background-color: #900;
             }
 
-            .home {
-                position: fixed;
-                top: 0;
-                padding: 33px 10px;
-                font-size: 18px;
-                font-weight: bold;
-                color: #fff;
-                text-decoration: none;
-            }
-
             .ascii {
                 position: fixed;
                 bottom: 0;
@@ -131,36 +124,159 @@
                 white-space: pre;
             }
 
-            /* media queries */
 
-            /* iPhone Retina */ 
+/* animations */
+            
+            @keyframes typing {
+                from {
+                    width: 0;
+                }
+                to {
+                   width: 100%; 
+                }
+            }
+
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+
+/* media queries */
+
+/* iPhone Retina */ 
             @media only screen and (min-width : 320px) and (max-width : 429px) {
                 .container {
                     max-width: 333px;
                     padding: 5px;
                 }
+                
+                .home a {
+                        font-size: 1em;
+                }
+
+                .button-container {
+                    opacity: 75%;
+                }
+                
+                button {
+                    background-color: #090;
+                }
+
+                .no {
+                    background-color: #900;
+                }
             }
 
-            /* General Phones */ 
+/* General Phones */ 
             @media only screen and (min-width : 430px) and (max-width : 767px) {
                 .container {
                     max-width: 444px;
                     padding: 5px;
                 }
-            }
 
-            /* Tablets */
-            @media only screen and (min-width : 768px) and (max-width : 991px) {
+                .home a {
+                    font-size: 1em;
+                }
+
+                .button-container {
+                    opacity: 75%;
+                }
                 
+                button {
+                    background-color: #090;
+                }
+
+                .no {
+                    background-color: #900;
+                }
             }
 
-            /* Desktops */
+/* Tablets */
+            @media only screen and (min-width : 768px) and (max-width : 991px) {
+                .container {
+                    min-width: 555px;
+                    padding: 5px;
+                }
+
+                span {
+                    font-size: 1.55em;
+                }
+                
+                p {
+                    font-size: 1.5em;
+                }
+                
+                .button-container {
+                    opacity: 75%;
+                }
+                
+                button {
+                    font-size: 1.5em;
+                    background-color: #090;
+                }
+
+                .no {
+                    background-color: #900;
+                }
+
+                .home a {
+                        font-size: 1.5em;
+                }
+            }
+
+/* Large Tablets */
             @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                .container {
+                    min-width: 666px;
+                    padding: 5px;
+                }
+
+                span {
+                    font-size: 1.75em;
+                }
+                
+                p {
+                    font-size: 1.7em;
+                }
+                
+                .button-container {
+                    opacity: 75%;
+                }
+                
+                button {
+                    font-size: 1.7em;
+                    background-color: #090;
+                }
+
+                .no {
+                    background-color: #900;
+                }
+
+                .home a {
+                        font-size: 1.7em;
+                } 
+            }
+
+
+/* Wide Screens */
+            @media only screen and (min-width : 1200px) {
 
             }
 
-            /* Wide Screens */
-            @media only screen and (min-width : 1200px) {
+
+/* Retina Macs */
+            @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (   min--moz-device-pixel-ratio: 2),
+                only screen and (     -o-min-device-pixel-ratio: 2/1),
+                only screen and (        min-device-pixel-ratio: 2),
+                only screen and (                min-resolution: 192dpi),
+                only screen and (                min-resolution: 2dppx) { 
 
             }
 

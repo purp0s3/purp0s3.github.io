@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>purp0s3</title>
+        <title>purp0s3 - about me</title>
 
         <style>
             
@@ -101,26 +101,13 @@
 
             .about {
                 display: flex;
-                position: relative;
+                position: fixed;
                 top: 18vh;
-                left: 14%;
                 align-items: center;
-                justify-content: flex-start;
+                justify-content: center;
                 padding: 42px;
                 width: 100%;
                 z-index: 1;
-            }
-
-            .about img {
-                max-height: 444px;
-                margin-top: 1dvh;
-                margin-right: 20px;
-                border-radius: 50%;
-            }
-
-            .about img:hover {
-                animation: blink;
-                animation-duration: 1s;
             }
 
             .text {
@@ -234,25 +221,17 @@
                     left: 0;
                     align-items: center;
                     -webkit-box-align: center;
-                    justify-content: flex-start;
-                    -webkit-box-direction: flex-start;
-                    -webkit-box-pack: flex-start;
+                    justify-content: center;
+                    -webkit-box-direction: center;
+                    -webkit-box-pack: center;
                     width: 100%;
-                    height: calc(50vh - 80px);
-                }
-
-                .about img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 27vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
                     left: 1vw;
+                    right: 1vw;
                     font-size: 0.5em;
                     margin-top: 40vh;
                 }
@@ -263,15 +242,6 @@
 
                 .text h3 {
                     font-size: 0.7rem;
-                }
-
-                .text h4 {
-                    font-size: 0.8rem;
-                    line-height: 0.7;
-                }
-
-                .text span {
-                    font-size: 1.3rem;
                 }
             }
 
@@ -307,30 +277,22 @@
                 .about {
                     display: flex;
                     position: fixed;
+                    left: 0;
                     align-items: center;
                     -webkit-box-align: center;
-                    justify-content: flex-start;
-                    -webkit-box-direction: flex-start;
-                    -webkit-box-pack: flex-start;
+                    justify-content: center;
+                    -webkit-box-direction: center;
+                    -webkit-box-pack: center;
                     width: 100%;
-                    height: calc(50vh - 80px);
-                }
-
-                .about img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 30vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    margin-right: 20px;
-                    border-radius: 50%;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
                     top: 42vh;
-                    left: 1vh;
-                    font-size: 0.5em;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 0.7em;
                 }
 
                 .text h2 {
@@ -339,14 +301,6 @@
 
                 .text h3 {
                     font-size: 0.7rem;
-                }
-
-                .text h4 {
-                    font-size: 1rem;
-                }
-
-                .text span {
-                    font-size: 1.3rem;
                 }
             }
 
@@ -381,45 +335,29 @@
                 .about {
                     display: flex;
                     position: fixed;
+                    left: 0;
                     align-items: center;
                     -webkit-box-align: center;
-                    justify-content: flex-start;
-                    -webkit-box-direction: flex-start;
-                    -webkit-box-pack: flex-start;
+                    justify-content: center;
+                    -webkit-box-direction: center;
+                    -webkit-box-pack: center;
                     width: 100%;
-                    height: calc(50vh - 80px);
-                }
-
-                .about img {
-                    position: fixed;
-                    top: 7vh;
-                    left: 30vw;
-                    max-height: 333px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
                 }
 
                 .text {
                     position: fixed;
-                    top: 50vh;
+                    top: 20vh;
                     left: 1vw;
+                    right: 1vw;
                     font-size: 1em;
                 }
 
                 .text h2 {
-                    font-size: 1.3em;
-                }
-
-                .text h3 {
-                    font-size: 1.2em;
-                }
-
-                .text h4 {
                     font-size: 1.5em;
                 }
 
-                .text span {
-                    font-size: 1.3em;
+                .text h3 {
+                    font-size: 1.5em;
                 }
             }
 
@@ -450,6 +388,34 @@
 
                 .test a {
                     font-size: 15px;
+                }
+
+                .about {
+                    display: flex;
+                    position: fixed;
+                    left: 0;
+                    align-items: center;
+                    -webkit-box-align: center;
+                    justify-content: center;
+                    -webkit-box-direction: center;
+                    -webkit-box-pack: center;
+                    width: 100%;
+                    height: 20vh;
+                }
+
+                .text {
+                    position: fixed;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 1.2em;
+                }
+
+                .text h2 {
+                    font-size: 1.5em;
+                }
+
+                .text h3 {
+                    font-size: 1.5em;
                 }
             }
 
@@ -499,28 +465,41 @@
 
         <div class="about">
             
-            <img src="../stuff/imgs/profile.jpg" alt="default profile picture"></a>
-            
             <div class="text">
-                <h1>You know my name.</h1>
+                <h1>You know my name.</h1><br>
                 <h2>My purpose is to develop.<br> 
-                    I'm always willing to learn more.</h2>
-                <h3>    <a>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a><br>
-                    </h3>
-                    <h3><a>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a><br>
-                    </h3>
-                    <h3><a>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </a>
-                    </h3>
+                    I'm always willing to learn more.
+                </h2><br>
+                <h3>
+                    <a>
+                        Programming is what I'm interested in.
+                    </a><br>
                 </h3>
-                <h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </h4>      
+                <h3>
+                    <a>
+                    No matter what language, framework, system, if it exists it can be learnt.
+                    </a><br>
+                </h3>
+                <h3>
+                    <a>
+                    I'm inclined to front end but not restricted to it.
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                    Background scenes: jailbreak, hackintosh, tweaking and mods in general.
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                    Languages: Brazilian Portuguese, English (fluent), Spanish (intermediate).
+                    </a>
+                </h3>
+                <h3>
+                    <a>
+                    Windows, macOS and Linux. Daily. Why not.
+                    </a>
+                </h3>     
             </div>
         </div>
     
