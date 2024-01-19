@@ -11,8 +11,8 @@
             fundamentally human, beginner developer.
         </a><br>
         location:
-        <a href="https://en.wikipedia.org/wiki/Brazil">
-            Brazil, Earth, Sun, Milky Way.
+        <a href="https://en.wikipedia.org/wiki/São_Paulo">
+            São Paulo, Brazil, Earth, Sun, Milky Way.
         </a><br>
         contact:
         <a href="mailto:purp0s3@icloud.com">
@@ -22,7 +22,7 @@
     <a>
         this is my place.
     </a><br>
-    <a href="https://raw.githubusercontent.com/purp0s3/purp0s3/main/untitled/looking.txt">
+    <a href="untitled/looking.html">
         welcome.
     </a>
 </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon/favicon-16x16.png">
         <link rel="manifest" href="../imgs/favicon/site.webmanifest">
         
-        <title>purp0s3 - about me</title>
+        <title>purp0s3 - educación</title>
 
         <style>
             
@@ -114,36 +114,30 @@
                 opacity: 75%;
             }
 
-            .about {
-                display: flex;
+            .edu-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
                 position: fixed;
-                top: 18vh;
-                align-items: center;
-                -webkit-box-align: center;
-                justify-content: center;
-                -webkit-box-direction: center;
-                -webkit-box-pack: center;
-                padding: 42px;
-                width: 100%;
-                z-index: 1;
+                top: 53%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 75vw;
             }
 
-            .text {
-                margin-top: 1dvh;
-                text-align: center;
+            .edu-item {
+                border: 2px solid #090;
+                padding: 10px;
+                text-align: center;            
             }
 
-            .text a {
-                color: #000;
-            }
-            
-            .text h2 {
-                margin-top: 10px;
+            .edu-item img {
+                max-height: 142px;
             }
 
-            .text h3 {
-                font-size: 1.4em;
-                margin-top: 10px;
+            .edu-item p {
+                font-size: 1.2em;
+                line-height: 25px;
             }
 
             span {
@@ -230,25 +224,23 @@
                     font-size: 1em;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .edu-container {
+                    gap: 42px 5px;
+                    top: 54.5%;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 0.7em;
-                    margin-top: 40vh;
+                .edu-item {
+                    padding: 2px;
                 }
 
-                .text h2 {
-                    font-size: 1rem;
+                .edu-item img {
+                    max-height: 42px;
                 }
 
-                .text h3 {
-                    font-size: 0.9rem;
+                .edu-item p {
+                    font-size: 1em;
+                    line-height: 20px;
                 }
             }
 
@@ -291,25 +283,14 @@
                     font-size: 15px;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .edu-container {
+                    gap: 50px 10px;
+                    top: 54%;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 0.7em;
-                    margin-top: 40vh;
-                }
-
-                .text h2 {
-                    font-size: 1rem;
-                }
-
-                .text h3 {
-                    font-size: 0.9rem;
+                .edu-item img {
+                    max-height: 77px;
                 }
             }
 
@@ -340,25 +321,20 @@
                 .test a {
                     font-size: 1.2em;
                 }
-
-                .about {
-                    left: 0;
+                
+                .edu-container {
+                    gap: 50px 10px;
+                    top: 52%;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 1em;
+                .edu-item {
+                    padding: 20px;
                 }
 
-                .text h2 {
-                    font-size: 1.5em;
-                }
-
-                .text h3 {
-                    font-size: 1.5em;
+                .edu-item p {
+                    font-size: 1.3em;
+                    line-height: 28px;
                 }
             }
 
@@ -391,25 +367,19 @@
                     font-size: 1.3em;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .edu-container {
+                    gap: 50px 10px;
+                    top: 50%;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 1.2em;
+                .edu-item {
+                    padding: 40px 20px;
                 }
 
-                .text h2 {
+                .edu-item p {
                     font-size: 1.5em;
-                }
-
-                .text h3 {
-                    font-size: 1.5em;
+                    line-height: 42px;
                 }
             }
 
@@ -444,16 +414,16 @@
             </div>
 
             <nav>
-                <a href="../../index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="education.html">Education</a>
-                <a href="skills.html">Skills</a>
-                <a href="aboutme.html" class="active">About Me</a>
+                <a href="index.html">Inicio</a>
+                <a href="portfolio.html">Portafolio</a>
+                <a href="education.html" class="active">Educación</a>
+                <a href="skills.html">Conocimientos</a>
+                <a href="aboutme.html">Sobre Mí</a>
             </nav>
 
             <div class="flags">
-                <a href="../pt/index.html"><img src="../imgs/brazil.png" alt="Brazilian flag"></a>
-                <a href="../es/index.html"><img src="../imgs/spain.png" alt="Spanish flag"></a>
+                <a href="../pt/index.html"><img src="../imgs/brazil.png" alt="Bandera de Brasil"></a>
+                <a href="../../index.html"><img src="../imgs/united states.png" alt="Bandera de los Estados Unidos"></a>
             </div>
             
             <div class="test">
@@ -462,43 +432,39 @@
 
         </header>
 
-        <div class="about">
-            
-            <div class="text">
-                <h1>You know my name.</h1><br>
-                <h2>My purpose is to develop.<br> 
-                    I'm always willing to learn more.
-                </h2><br>
-                <h3>
-                    <a>
-                        Programming is what I'm interested in, it motivates me.
-                    </a><br>
-                </h3>
-                <h3>
-                    <a>
-                    No matter what language, framework, system. If it exists it can be learnt.
-                    </a><br>
-                </h3>
-                <h3>
-                    <a>
-                    I'm inclined to front end but not restricted to it.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Background scenes: jailbreak, hackintosh, tweaking and mods in general.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Languages: Brazilian Portuguese, English (fluent), Spanish (intermediate).
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Windows, macOS and Linux. Daily. Why not.
-                    </a>
-                </h3>     
+        <div class="edu-container">
+            <div class="edu-item">
+                <img src="../imgs/tobias.jpg" alt="logotipo de Colégio Tobias de Aguiar">
+                <p>
+                    Colégio Tobias de Aguiar<br>
+                    <b>Educación Infantil hasta el Bachillerato</b><br>
+                    (2007 - 2019)
+                </p>
+            </div>
+            <div class="edu-item">
+                <a href="../imgs/ILAC diploma.png" target="_blank"><img src="../imgs/ILAC.jpeg" alt="logotipo de ILAC"></a>
+                <p>
+                    ILAC @ Toronto<br>
+                    <b>Curso de Dominio del Inglés</b><br>
+                    (2018)
+                </p>
+            </div>
+            <div class="edu-item">
+                <img src="../imgs/unip.png" alt="logotipo de UNIP">
+                <p>
+                    UNIP<br>
+                    <b>Licenciatura en Psicología</b><br>
+                    (2020 - 2022)<br>
+                    aplazada
+                </p>
+            </div>
+            <div class="edu-item">
+                <img src="../imgs/unicid.png" alt="logotipo de UNICID">
+                <p>
+                    UNICID<br>
+                    <b>Tecnólogo en Análisis y Desarrollo de Sistemas</b><br>
+                    (2022 - 2023)
+                </p>
             </div>
         </div>
     

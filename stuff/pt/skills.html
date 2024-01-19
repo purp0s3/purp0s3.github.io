@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
     <head>
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon/favicon-16x16.png">
         <link rel="manifest" href="../imgs/favicon/site.webmanifest">
         
-        <title>purp0s3 - about me</title>
+        <title>purp0s3 - conhecimento</title>
 
         <style>
             
@@ -114,10 +114,16 @@
                 opacity: 75%;
             }
 
-            .about {
+            .wip {
+                color: #090;
+            }
+
+            .skills {
                 display: flex;
                 position: fixed;
-                top: 18vh;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 align-items: center;
                 -webkit-box-align: center;
                 justify-content: center;
@@ -130,19 +136,20 @@
 
             .text {
                 margin-top: 1dvh;
-                text-align: center;
+                text-align: left;
             }
 
             .text a {
                 color: #000;
+                font-weight: normal;
+            }
+
+            .text img {
+                max-height: 22px;
+                margin-left: 14px;
             }
             
             .text h2 {
-                margin-top: 10px;
-            }
-
-            .text h3 {
-                font-size: 1.4em;
                 margin-top: 10px;
             }
 
@@ -230,25 +237,23 @@
                     font-size: 1em;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .skills {
+                    top: 33vh;
+                    left: 52vw;
                 }
 
                 .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 0.7em;
-                    margin-top: 40vh;
+                    font-size: 0.5em;
+                    margin-top: 42vh;
+                }
+
+                .text img {
+                    max-height: 10px;
+                    margin-left: 10px;
                 }
 
                 .text h2 {
                     font-size: 1rem;
-                }
-
-                .text h3 {
-                    font-size: 0.9rem;
                 }
             }
 
@@ -291,25 +296,23 @@
                     font-size: 15px;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .skills {
+                    top: 33vh;
+                    left: 52vw;
                 }
 
                 .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
                     font-size: 0.7em;
-                    margin-top: 40vh;
+                    margin-top: 42vh;
+                }
+
+                .text img {
+                    max-height: 15px;
+                    margin-left: 10px;
                 }
 
                 .text h2 {
                     font-size: 1rem;
-                }
-
-                .text h3 {
-                    font-size: 0.9rem;
                 }
             }
 
@@ -341,24 +344,23 @@
                     font-size: 1.2em;
                 }
 
-                .about {
-                    left: 0;
+                .skills {
+                    top: 33vh;
+                    left: 52vw;
                 }
 
                 .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
                     font-size: 1em;
+                    margin-top: 42vh;
+                }
+
+                .text img {
+                    max-height: 22px;
+                    margin-left: 15px;
                 }
 
                 .text h2 {
-                    font-size: 1.5em;
-                }
-
-                .text h3 {
-                    font-size: 1.5em;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -391,25 +393,23 @@
                     font-size: 1.3em;
                 }
 
-                .about {
-                    left: 0;
-                    height: 20vh;
+                .skills {
+                    top: 33vh;
+                    left: 52vw;
                 }
 
                 .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 1.2em;
+                    font-size: 1.4em;
+                    margin-top: 42vh;
+                }
+
+                .text img {
+                    max-height: 30px;
+                    margin-left: 25px;
                 }
 
                 .text h2 {
-                    font-size: 1.5em;
-                }
-
-                .text h3 {
-                    font-size: 1.5em;
+                    font-size: 2rem;
                 }
             }
 
@@ -444,16 +444,16 @@
             </div>
 
             <nav>
-                <a href="../../index.html">Home</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="education.html">Education</a>
-                <a href="skills.html">Skills</a>
-                <a href="aboutme.html" class="active">About Me</a>
+                <a href="index.html">Início</a>
+                <a href="portfolio.html">Portfólio</a>
+                <a href="education.html">Educação</a>
+                <a href="skills.html" class="active">Conhecimento</a>
+                <a href="aboutme.html">Sobre Mim</a>
             </nav>
 
             <div class="flags">
-                <a href="../pt/index.html"><img src="../imgs/brazil.png" alt="Brazilian flag"></a>
-                <a href="../es/index.html"><img src="../imgs/spain.png" alt="Spanish flag"></a>
+                <a href="../../index.html"><img src="../imgs/united states.png" alt="Bandeira dos Estados Unidos"></a>
+                <a href="../es/index.html"><img src="../imgs/spain.png" alt="Bandeira da Espanha"></a>
             </div>
             
             <div class="test">
@@ -462,43 +462,28 @@
 
         </header>
 
-        <div class="about">
+        <div class="skills">
             
             <div class="text">
-                <h1>You know my name.</h1><br>
-                <h2>My purpose is to develop.<br> 
-                    I'm always willing to learn more.
-                </h2><br>
-                <h3>
-                    <a>
-                        Programming is what I'm interested in, it motivates me.
-                    </a><br>
-                </h3>
-                <h3>
-                    <a>
-                    No matter what language, framework, system. If it exists it can be learnt.
-                    </a><br>
-                </h3>
-                <h3>
-                    <a>
-                    I'm inclined to front end but not restricted to it.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Background scenes: jailbreak, hackintosh, tweaking and mods in general.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Languages: Brazilian Portuguese, English (fluent), Spanish (intermediate).
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Windows, macOS and Linux. Daily. Why not.
-                    </a>
-                </h3>     
+                <h1 class="wip">em andamento.</h1>
+                <h1>Linguagens de Programação<img src="../imgs/html5.svg"><img src="../imgs/css3.svg"><img src="../imgs/swift.svg"><img src="../imgs/java.svg"><img src="../imgs/javascript.svg"><img src="../imgs/python-.svg"><img src="../imgs/sql.png"></h1>
+                    <h2>
+                        <a>
+                            HTML, CSS, Swift, Java, Javascript, Python, SQL.
+                        </a><br><br>
+                    </h2>
+                <h1>Ferramentas & IDEs<img src="../imgs/mysql.svg"><img src="../imgs/git.svg"><img src="../imgs/wampserver.png"><img src="../imgs/apache.svg"><img src="../imgs/vscode.svg"><img src="../imgs/eclipse.png"><img src="../imgs/xcode.svg"><img src="../imgs/androidstudio.svg"></h1>
+                    <h2>
+                        <a>
+                            MySQL, Git, WampServer, Apache Tomcat, VSCode, Eclipse, Xcode, Android Studio.
+                        </a><br><br>
+                    </h2>
+                <h1>Outros<img src="../imgs/office.png"><img src="../imgs/photoshop.svg"><img src="../imgs/vegas.png"><img src="../imgs/figma.svg"></h1>
+                    <h2>
+                        <a>
+                            Office Suite, Photoshop, Vegas Pro, Figma.
+                        </a>
+                    </h2>
             </div>
         </div>
     
