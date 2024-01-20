@@ -124,7 +124,7 @@
                 justify-content: flex-start;
                 -webkit-box-direction: flex-start;
                 -webkit-box-pack: flex-start;
-                padding: 42px;
+                padding: 42px 0 0 42px;
                 width: 100%;
                 z-index: 1;
             }
@@ -134,6 +134,9 @@
                 margin-top: 1dvh;
                 margin-right: 20px;
                 border-radius: 50%;
+                border-style: outset;
+                border-width: 3px;
+                border-color: #090;
             }
 
             .text {
@@ -204,6 +207,28 @@
                 color: #0f0;
                 font-size: 1.6rem;
                 animation: blink infinite;
+            }
+
+            .links-container {
+                display: flex;
+                position: fixed;
+                left: 24.77vw;
+                bottom: 100px;
+            }
+
+            .links {
+                margin-left: 30px;
+            }
+
+            .links img {
+                max-height: 42px;
+                border: 2px;
+                border-style: dashed;
+                border-color: #090;
+            }
+
+            .links img:hover {
+                opacity: 50%;
             }
 
             .ascii {
@@ -298,6 +323,15 @@
                     border-radius: 50%;
                 }
 
+                .links-container {
+                    left: 30vw;
+                    bottom: 80px;
+                }
+
+                .links img {
+                    max-height: 27px;
+                }
+
                 .text {
                     position: fixed;
                     top: 7vh;
@@ -378,6 +412,15 @@
                     border-radius: 50%;
                 }
 
+                .links-container {
+                    left: 30vw;
+                    bottom: 100px;
+                }
+
+                .links img {
+                    max-height: 33px;
+                }
+
                 .text {
                     position: fixed;
                     top: 42vh;
@@ -387,7 +430,7 @@
                 }
 
                 .text h2 {
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                 }
 
                 .text h3 {
@@ -400,6 +443,10 @@
 
                 .text span {
                     font-size: 1.3rem;
+                }
+
+                .ascii {
+                    font-size: 8px;
                 }
             }
 
@@ -438,10 +485,15 @@
                 .intro img {
                     position: fixed;
                     top: 7vh;
-                    left: 30vw;
+                    left: 31.5vw;
                     max-height: 333px;
                     margin-top: 11vh;
                     border-radius: 50%;
+                }
+
+                .links-container {
+                    top: 12vh;
+                    left: 42vw;
                 }
 
                 .text {
@@ -466,6 +518,10 @@
 
                 .text span {
                     font-size: 1.3em;
+                }
+
+                .ascii {
+                    font-size: 8px;
                 }
             }
 
@@ -506,10 +562,14 @@
                 .intro img {
                     position: fixed;
                     top: 7vh;
-                    left: 30vw;
+                    left: 33vw;
                     max-height: 400px;
                     margin-top: 11vh;
                     border-radius: 50%;
+                }
+
+                .links-container {
+                    left: 42vw;
                 }
 
                 .text {
@@ -534,6 +594,10 @@
 
                 .text span {
                     font-size: 1.5em;
+                }
+
+                .ascii {
+                    font-size: 9px;
                 }
             }
 
@@ -617,8 +681,17 @@
                 </h3>
                 <h4>
                     <p>
-                    bem-vindo(a) à minha casa.<span>|</span></p>
+                    bem-vindo(a) ao meu lugar.<span>|</span></p>
                 </h4>      
+            </div>
+        </div>
+
+        <div class="links-container">
+            <div class="links">
+                <a href="https://www.linkedin.com/in/lucasnasc04"><img src="../imgs/linkedin.png" alt="LinkedIn logo"></a>
+            </div>
+            <div class="links">
+                <a href="https://github.com/purp0s3/"><img src="../imgs/github.png" alt="GitHub logo"></a>
             </div>
         </div>
     
