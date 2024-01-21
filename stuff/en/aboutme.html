@@ -123,18 +123,21 @@
                 justify-content: center;
                 -webkit-box-direction: center;
                 -webkit-box-pack: center;
-                padding: 42px;
                 width: 100%;
                 z-index: 1;
             }
 
             .text {
-                margin-top: 1dvh;
                 text-align: center;
             }
 
-            .text a {
-                color: #000;
+            .text img {
+                max-height: 275px;
+                transition: transform .2s;
+            }
+
+            .text img:hover {
+                transform: scale(2);
             }
             
             .text h2 {
@@ -232,7 +235,7 @@
 
                 .about {
                     left: 0;
-                    height: 20vh;
+                    height: 33vh;
                 }
 
                 .text {
@@ -240,7 +243,16 @@
                     left: 1vw;
                     right: 1vw;
                     font-size: 0.7em;
-                    margin-top: 40vh;
+                    margin-top: 42vh;
+                }
+
+                .text img {
+                    max-height: 150px;
+                    transition: transform .2s;
+                }
+
+                .text img:hover {
+                    transform: scale(1.5);
                 }
 
                 .text h2 {
@@ -293,7 +305,7 @@
 
                 .about {
                     left: 0;
-                    height: 20vh;
+                    height: 33vh;
                 }
 
                 .text {
@@ -302,6 +314,15 @@
                     right: 1vw;
                     font-size: 0.7em;
                     margin-top: 40vh;
+                }
+
+                .text img {
+                    max-height: 200px;
+                    transition: transform .2s;
+                }
+
+                .text img:hover {
+                    transform: scale(1.4);
                 }
 
                 .text h2 {
@@ -349,12 +370,13 @@
                     left: 0;
                 }
 
-                .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 1em;
+                .text img {
+                    max-height: 300px;
+                    transition: transform .2s;
+                }
+
+                .text img:hover {
+                    transform: scale(1.4);
                 }
 
                 .text h2 {
@@ -401,15 +423,19 @@
 
                 .about {
                     left: 0;
-                    height: 20vh;
                 }
 
                 .text {
-                    position: fixed;
-                    top: 20vh;
-                    left: 1vw;
-                    right: 1vw;
                     font-size: 1.2em;
+                }
+
+                .text img {
+                    max-height: 400px;
+                    transition: transform .2s;
+                }
+
+                .text img:hover {
+                    transform: scale(1.5);
                 }
 
                 .text h2 {
@@ -477,15 +503,10 @@
         <div class="about">
             
             <div class="text">
-                <h1>You know my name.</h1><br>
+                <a><img src="../imgs/babyme.jpg" alt="a picture of me as a baby"><br>são paulo, december 2003</a>
                 <h2>My purpose is to develop.<br> 
                     I'm always willing to learn more.
-                </h2><br>
-                <h3>
-                    <a>
-                        Programming is what I'm interested in, it motivates me.
-                    </a><br>
-                </h3>
+                </h2>
                 <h3>
                     <a>
                     No matter what language, framework, system. If it exists it can be learnt.

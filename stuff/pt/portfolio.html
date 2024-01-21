@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="pt-br">
 
     <head>
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="../imgs/favicon/favicon-16x16.png">
         <link rel="manifest" href="../imgs/favicon/site.webmanifest">
         
-        <title>purp0s3 - sobre mí</title>
+        <title>purp0s3 - portfólio</title>
 
         <style>
             
@@ -114,7 +114,11 @@
                 opacity: 75%;
             }
 
-            .about {
+            .wip {
+                color: #090;
+            }
+
+            .skills {
                 display: flex;
                 position: fixed;
                 top: 18vh;
@@ -123,29 +127,22 @@
                 justify-content: center;
                 -webkit-box-direction: center;
                 -webkit-box-pack: center;
+                padding: 42px;
                 width: 100%;
                 z-index: 1;
             }
 
             .text {
-                text-align: center;
+                margin-top: 1dvh;
+                text-align: left;
             }
 
-            .text img {
-                max-height: 275px;
-                transition: transform .2s;
+            .text a {
+                color: #000;
+                font-weight: normal;
             }
-
-            .text img:hover {
-                transform: scale(2);
-            }
-
+            
             .text h2 {
-                margin-top: 10px;
-            }
-
-            .text h3 {
-                font-size: 1.4em;
                 margin-top: 10px;
             }
 
@@ -233,34 +230,21 @@
                     font-size: 1em;
                 }
 
-                .about {
+                .skills {
                     left: 0;
-                    height: 33vh;
+                    height: 20vh;
                 }
 
                 .text {
                     position: fixed;
                     left: 1vw;
                     right: 1vw;
-                    font-size: 0.7em;
+                    font-size: 0.5em;
                     margin-top: 42vh;
-                }
-
-                .text img {
-                    max-height: 130px;
-                    transition: transform .2s;
-                }
-
-                .text img:hover {
-                    transform: scale(1.5);
                 }
 
                 .text h2 {
                     font-size: 1rem;
-                }
-
-                .text h3 {
-                    font-size: 0.9rem;
                 }
             }
 
@@ -303,9 +287,9 @@
                     font-size: 15px;
                 }
 
-                .about {
+                .skills {
                     left: 0;
-                    height: 33vh;
+                    height: 20vh;
                 }
 
                 .text {
@@ -313,24 +297,11 @@
                     left: 1vw;
                     right: 1vw;
                     font-size: 0.7em;
-                    margin-top: 40vh;
-                }
-
-                .text img {
-                    max-height: 200px;
-                    transition: transform .2s;
-                }
-
-                .text img:hover {
-                    transform: scale(1.4);
+                    margin-top: 42vh;
                 }
 
                 .text h2 {
                     font-size: 1rem;
-                }
-
-                .text h3 {
-                    font-size: 0.9rem;
                 }
 
                 .ascii {
@@ -365,25 +336,21 @@
                 .test a {
                     font-size: 1.2em;
                 }
-
-                .about {
+                
+                .skills {
                     left: 0;
+                    height: 20vh;
                 }
 
-                .text img {
-                    max-height: 300px;
-                    transition: transform .2s;
-                }
-
-                .text img:hover {
-                    transform: scale(1.4);
+                .text {
+                    position: fixed;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 1em;
+                    margin-top: 42vh;
                 }
 
                 .text h2 {
-                    font-size: 2rem;
-                }
-
-                .text h3 {
                     font-size: 1.5rem;
                 }
 
@@ -421,29 +388,21 @@
                     font-size: 1.3em;
                 }
 
-                .about {
+                .skills {
                     left: 0;
+                    height: 20vh;
                 }
 
                 .text {
-                    font-size: 1.2em;
-                }
-
-                .text img {
-                    max-height: 400px;
-                    transition: transform .2s;
-                }
-
-                .text img:hover {
-                    transform: scale(1.5);
+                    position: fixed;
+                    left: 1vw;
+                    right: 1vw;
+                    font-size: 1.4em;
+                    margin-top: 42vh;
                 }
 
                 .text h2 {
-                    font-size: 1.5em;
-                }
-
-                .text h3 {
-                    font-size: 1.5em;
+                    font-size: 2rem;
                 }
 
                 .ascii {
@@ -482,16 +441,16 @@
             </div>
 
             <nav>
-                <a href="index.html">Inicio</a>
-                <a href="portfolio.html">Portafolio</a>
-                <a href="education.html">Educación</a>
-                <a href="skills.html">Conocimientos</a>
-                <a href="aboutme.html" class="active">Sobre Mí</a>
+                <a href="index.html">Início</a>
+                <a href="portfolio.html" class="active">Portfólio</a>
+                <a href="education.html">Educação</a>
+                <a href="skills.html">Conhecimento</a>
+                <a href="aboutme.html">Sobre Mim</a>
             </nav>
 
             <div class="flags">
-                <a href="../pt/index.html"><img src="../imgs/brazil.png" alt="Bandera de Brasil"></a>
-                <a href="../../index.html"><img src="../imgs/united states.png" alt="Bandera de los Estados Unidos"></a>
+                <a href="../../index.html"><img src="../imgs/united states.png" alt="Bandeira dos Estados Unidos"></a>
+                <a href="../es/index.html"><img src="../imgs/spain.png" alt="Bandeira da Espanha"></a>
             </div>
             
             <div class="test">
@@ -500,38 +459,10 @@
 
         </header>
 
-        <div class="about">
+        <div class="skills">
             
             <div class="text">
-                <a><img src="../imgs/babyme.jpg" alt="una foto mía bebé"><br>são paulo, diciembre de 2003</a>
-                <h2>Mi propósito es desarrollar.<br> 
-                    Siempre dispuesto a aprender más.
-                </h2>
-                <h3>
-                    <a>
-                    No importa el lenguaje, framework, sistema. Si existe, hay forma de aprenderlo.
-                    </a><br>
-                </h3>
-                <h3>
-                    <a>
-                    Inclinado hacia el front end pero no limitado.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Panorama: jailbreak, hackintosh, tweaking y mods en general.
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Idiomas: Portugués Brasileño, Inglés (fluido), Español (intermedio).
-                    </a>
-                </h3>
-                <h3>
-                    <a>
-                    Windows, macOS y Linux. Diariamente. Porque no.
-                    </a>
-                </h3>     
+                <h1 class="wip">em andamento.</h1>
             </div>
         </div>
     
