@@ -114,36 +114,41 @@
                 opacity: 75%;
             }
 
-            .wip {
-                color: #090;
-            }
-
-            .skills {
-                display: flex;
+            .stuff-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
                 position: fixed;
-                top: 18vh;
-                align-items: center;
-                -webkit-box-align: center;
-                justify-content: center;
-                -webkit-box-direction: center;
-                -webkit-box-pack: center;
-                padding: 42px;
-                width: 100%;
-                z-index: 1;
+                top: 53%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 75vh;
+                width: 75vw;
+                overflow-y: scroll;
             }
 
-            .text {
-                margin-top: 1dvh;
-                text-align: left;
+            .stuff-item {
+                border: 2px solid #090;
+                padding: 20px 30px 20px 30px;
+                text-align: center;            
             }
 
-            .text a {
-                color: #000;
-                font-weight: normal;
+            .stuff-item img {
+                max-height: 333px;
             }
-            
-            .text h2 {
-                margin-top: 10px;
+
+            .stuff-item p {
+                font-size: 1.1em;
+                line-height: 25px;
+            }
+
+            .stuff-item a {
+                color: #090;
+                font-weight: bold;
+            }
+
+            .stuff-item a:hover {
+                color: #060;
             }
 
             span {
@@ -230,21 +235,27 @@
                     font-size: 1em;
                 }
 
-                .skills {
-                    left: 0;
-                    height: 20vh;
+                .stuff-container {
+                    gap: 35px 5px;
+                    height: 65vh;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 0.5em;
-                    margin-top: 42vh;
+                .stuff-item {
+                    padding: 5px;
                 }
 
-                .text h2 {
-                    font-size: 1rem;
+                .stuff-item img {
+                    max-height: 100px;
+                }
+
+                .stuff-item p {
+                    font-size: 0.88em;
+                    line-height: 20px;
+                }
+
+                .stuff-item h2 {
+                    font-size: 1em;
                 }
             }
 
@@ -287,21 +298,27 @@
                     font-size: 15px;
                 }
 
-                .skills {
-                    left: 0;
-                    height: 20vh;
+                .stuff-container {
+                    gap: 35px 5px;
+                    height: 69vh;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
-                    font-size: 0.7em;
-                    margin-top: 42vh;
+                .stuff-item {
+                    padding: 5px;
                 }
 
-                .text h2 {
-                    font-size: 1rem;
+                .stuff-item img {
+                    max-height: 115px;
+                }
+
+                .stuff-item p {
+                    font-size: 0.88em;
+                    line-height: 20px;
+                }
+
+                .stuff-item h2 {
+                    font-size: 1em;
                 }
 
                 .ascii {
@@ -336,22 +353,28 @@
                 .test a {
                     font-size: 1.2em;
                 }
-
-                .skills {
-                    left: 0;
-                    height: 20vh;
+                
+                .stuff-container {
+                    gap: 15px 10px;
+                    height: 77vh;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
+                .stuff-item {
+                    padding: 10px;
+                }
+
+                .stuff-item img {
+                    max-height: 200px;
+                }
+
+                .stuff-item p {
                     font-size: 1em;
-                    margin-top: 42vh;
+                    line-height: 25px;
                 }
 
-                .text h2 {
-                    font-size: 1.5rem;
+                .stuff-item h2 {
+                    font-size: 1.2em;
                 }
 
                 .ascii {
@@ -388,21 +411,27 @@
                     font-size: 1.3em;
                 }
 
-                .skills {
-                    left: 0;
-                    height: 20vh;
+                .stuff-container {
+                    gap: 15px 10px;
+                    height: 77vh;
+                    width: 97vw;
                 }
 
-                .text {
-                    position: fixed;
-                    left: 1vw;
-                    right: 1vw;
+                .stuff-item {
+                    padding: 10px;
+                }
+
+                .stuff-item img {
+                    max-height: 277px;
+                }
+
+                .stuff-item p {
+                    font-size: 1.2em;
+                    line-height: 30px;
+                }
+
+                .stuff-item h2 {
                     font-size: 1.4em;
-                    margin-top: 42vh;
-                }
-
-                .text h2 {
-                    font-size: 2rem;
                 }
 
                 .ascii {
@@ -459,10 +488,47 @@
 
         </header>
 
-        <div class="skills">
-            
-            <div class="text">
-                <h1 class="wip">work in progress.</h1>
+        <div class="stuff-container">
+            <div class="stuff-item">
+                <img src="../imgs/brinks-img.png" alt="Toy Store project homepage">
+                <h2>Brinks - a toy store website mockup</h2>
+                <p>
+                    built using <b>Java, JSP, MySQL and Apache Tomcat</b><br>
+                    <a href="https://drive.google.com/file/d/1Pf1Pbgpo0jvP7wbMXwBirvpjrHNsI7VL/view?usp=sharing" target="_blank">demo</a>&nbsp;
+                    <a href="https://github.com/purp0s3/Brinks" target="_blank">source</a>
+                </p>
+            </div>
+
+            <div class="stuff-item">
+                <img src="../imgs/DummyPDM-img.png" alt="iOS app pages for login, account creation and profile.">
+                <h2>DummyPDM - an iOS app mockup</h2>
+                <p>
+                    built using <b>Swift and Firebase</b><br>
+                    <a href="https://drive.google.com/file/d/1G85aWKTWZwrKwkzdwnB1bXb6LEEFE7IQ/view?usp=sharing" target="_blank">demo</a>&nbsp;
+                    <a href="https://github.com/purp0s3/DummyPDM" target="_blank">source</a>
+                </p>
+            </div>
+
+            <div class="stuff-item">
+                <img src="../imgs/COMP-img.png" alt="Figma app prototype and it's pages">
+                <h2>COMP - a Figma iOS app prototype</h2>
+                <p>
+                    built using <b>Figma</b><br>
+                    <a href="https://drive.google.com/file/d/1OV36Hd9gGvy6-hxyHr6wDDvt7TRj-fwI/view?usp=sharing" target="_blank">video demo</a>&nbsp;
+                    <a href="https://www.figma.com/proto/uwizIy4sS7QuZMPBivPY7I/COMP?type=design&node-id=0-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=4%3A116" target="_blank">prototype demo</a>&nbsp;
+                    <a href="https://www.figma.com/file/uwizIy4sS7QuZMPBivPY7I/COMP?type=design&node-id=0-1&mode=design" target="_blank">source</a>
+                </p>
+            </div>
+
+            <div class="stuff-item">
+                <img src="../imgs/DengueZer@-img.png" alt="Figma app prototype and it's pages">
+                <h2>DengueZer@ - a Figma iOS app prototype</h2>
+                <p>
+                    built using <b>Figma</b><br>
+                    <a href="https://drive.google.com/file/d/1utlTZd0JgqC2oJ1GShnItU2vNdRBhTrg/view?usp=sharing" target="_blank">video demo</a>&nbsp;
+                    <a href="https://www.figma.com/proto/jMv5JyVLP6Hx7D2XWqnzQm/DengueZer%40?node-id=0-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=4%3A116" target="_blank">prototype demo</a>&nbsp;
+                    <a href="https://www.figma.com/file/jMv5JyVLP6Hx7D2XWqnzQm/DengueZer%40?node-id=0%3A1&t=62xF4aPY6KOZFYz7-1" target="_blank">source</a>
+                </p>
             </div>
         </div>
     
