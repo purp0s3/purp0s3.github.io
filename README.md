@@ -22,7 +22,7 @@
     <a>
         this is my place.
     </a><br>
-    <a href="untitled/looking.html">
+    <a>
         welcome.
     </a>
 </div>
