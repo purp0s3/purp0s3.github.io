@@ -1,21 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="apple-touch-icon" sizes="180x180" href="stuff/imgs/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="stuff/imgs/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="stuff/imgs/favicon/favicon-16x16.png">
-        <link rel="manifest" href="stuff/imgs/favicon/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/site.webmanifest">
 
         <link rel="stylesheet" href="assets/css/styles.css">
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
         
         <title>purp0s3</title>
+
     </head>
 
     <body>
+
+        <header class="l-header">
+
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__title"><img src="assets/img/title.png"></a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="assets/html/pt/index.html" class="nav__link"><img src="assets/img/brazil.png" alt="Brazilian flag"></a></li>
+                        <li class="nav__item"><a href="assets/html/es/index.html" class="nav__link"><img src="assets/img/spain.png" alt="Spanish flag"></a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+
+        </header>
+
+        <main class="l-main">
+
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hey there,<br>I'm<span class="home__title-color"> Lucas Nascimento</span></h1>
+                    <h2 class="home__subtitle">I'm a dev student. São Paulo, Brazil.</h2>
+
+                    <a href="mailto:purp0s3@icloud.com" class="button">Contact me!</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/purp0s3/" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="111" href="assets/img/devpic.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/babyme.jpg" alt="me as a baby sitting in front of a computer"><br>
+                        <a>são paulo, december 2003</a>
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">My purpose is to develop.</h2>
+                        <p class="about__text">I'm always willing to learn more.<br>No matter what language, framework, system. If it exists it can be learnt. I'm inclined to front end but not restricted to it.<br><br>Background scenes: jailbreak, hackintosh, tweaking and mods in general.<br><br>Languages: Brazilian Portuguese, English (fluent), Spanish (intermediate).<br><br>Windows, macOS and Linux. Daily. Why not?</p>           
+                    </div>                                   
+                </div>
+            </section>
 
     </body>
 </html>

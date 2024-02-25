@@ -137,6 +137,10 @@
         color: #fff;
     }
 
+    .nav__link img {
+        max-height: 25px;
+    }
+
     .nav__link:hover {
         position: relative;
     }
@@ -151,8 +155,8 @@
         background-color: var(--first-color);
     }
 
-    .nav__logo {
-        color: var(--second-color);
+    .nav__title img {
+        max-height: 33px;
     }
 
     .nav__toggle {
@@ -197,7 +201,7 @@
 /* --- home --- */
     .home {
         position: relative;
-        row-gap: 5rem;
+        row-gap: 10rem;
         padding: 4rem 0 5rem;
     }
 
@@ -207,6 +211,10 @@
 
     .home__title {
         font-size: var(--big-font-size);
+    }
+
+    .home__subtitle {
+        font-size: var(--h2-font-size);
         margin-bottom: var(--mb-5);
     }
 
@@ -222,7 +230,7 @@
     .home__social-icon {
         width: max-content;
         margin-bottom: var(--mb-2);
-        font-size: 1.5rem;
+        font-size: 2.7rem;
         color: var(--second-color);
     }
 
@@ -276,8 +284,11 @@
         justify-self: center;
     }
 
+    .about__img a {
+        color: gray;
+    }
+
     .about__img img {
-        width: 200px;
         border-radius: 0.5rem;
     }
 
@@ -537,7 +548,15 @@
         }
 
         .about__img img {
-            width: 300px;
+            width: 420px;
+        }
+
+        .about__img img {
+            transition: transform .2s;
+        }
+
+        .about__img img:hover {
+            transform: scale(2);
         }
 
         .skills__container {
