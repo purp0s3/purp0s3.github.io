@@ -322,7 +322,6 @@
     .skills__icon {
         font-size: 2rem;
         margin-right: var(--mb-2);
-        color: var(--first-color);
     }
 
     .skills__names {
@@ -338,24 +337,9 @@
         height: 0.25rem;
         border-radius: 0.5rem;
         z-index: var(--z-back);
-    }
-
-    .skills__html {
-        width: 95%;
-    }
-
-    .skills__css {
-        width: 85%;
+        width: 100%;
     }
     
-    .skills__js {
-        width: 65%;
-    }
-
-    .skills__ux {
-        width: 85%;
-    }
-
     .skills__img {
         border-radius: 0.5rem;
     }
@@ -556,7 +540,7 @@
         }
 
         .about__img img:hover {
-            transform: scale(2);
+            transform: scale(1.5);
         }
 
         .skills__container {
