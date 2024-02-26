@@ -339,10 +339,6 @@
         z-index: var(--z-back);
         width: 100%;
     }
-    
-    .skills__img {
-        border-radius: 0.5rem;
-    }
 
 
 /* --- work --- */
