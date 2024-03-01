@@ -1,711 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="apple-touch-icon" sizes="180x180" href="stuff/imgs/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="stuff/imgs/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="stuff/imgs/favicon/favicon-16x16.png">
-        <link rel="manifest" href="stuff/imgs/favicon/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
         
         <title>purp0s3</title>
-
-        <style>
-            
-            body {
-                font-family: 'Courier New', monospace;
-                margin: 0;
-                padding: 0;
-                background-color: #fff;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                height: 100vh;
-            }
-
-            header {
-                width: 100%;
-                background-color: #000;
-                padding: 20px 10px;
-                position: fixed;
-                top: 0;
-                display: flex;
-                align-items: center;
-                box-shadow: 0 2px 2px rgba(0, 240, 0, 0.5);
-            }
-
-            .title {
-                color: #0f0;
-                padding-left: 4vw;
-            }
-
-            .title h1 {
-                width: 0;
-                overflow: hidden;
-                white-space: nowrap;
-                animation: typing 0.5s steps(20, end) forwards;
-            }
-
-            .title span {
-                color: #0f0;
-                font-size: 32px;
-                animation: blink infinite;
-                animation-duration: 1s;
-            }
-
-            nav {
-                display: flex;
-                gap: 6vh;
-                margin-left: 6vw;
-            }
-
-            nav a {
-                color: #fff;
-                text-decoration: none;
-                font-size: 20px;
-                font-weight: bold;
-            }
-
-            nav a:hover {
-                color: #090;
-            }
-
-            .active {
-                text-decoration: underline;
-                text-decoration-color: #0f0; 
-            }
-
-            .active:hover {
-                color: #090;
-                text-decoration: line-through;
-                text-decoration-color: #900;
-            }
-
-            .test {
-                position: fixed;
-                right: 3vw;
-            }
-
-            .test a {
-                color: #f00;
-                text-decoration: none;
-                font-size: 1.1em;
-                font-weight: bold;
-            }
-
-            .test a:hover {
-                color: #900;
-            }
-
-            .flags {
-                position: fixed;
-                top: 1vh;
-                right: 1.5vw;
-            }
-
-            .flags img {
-                max-height: 27px;
-            }
-
-            .flags img:hover {
-                opacity: 75%;
-            }
-
-            .intro {
-                display: flex;
-                position: fixed;
-                top: 18vh;
-                left: 14%;
-                align-items: center;
-                -webkit-box-align: center;
-                justify-content: flex-start;
-                -webkit-box-direction: flex-start;
-                -webkit-box-pack: flex-start;
-                padding: 42px 0 0 42px;
-                width: 100%;
-                z-index: 1;
-            }
-
-            .intro img {
-                max-height: 444px;
-                margin-top: 1dvh;
-                margin-right: 20px;
-                border-radius: 50%;
-                border-style: outset;
-                border-width: 3px;
-                border-color: #090;
-            }
-
-            .text {
-                margin-top: 1dvh;
-                text-align: left;
-            }
-
-            .text a {
-                color: #090;
-            }
-
-            .text p {
-                color: #000;
-            }
-
-            .text span {
-                color: #000;
-            }
-
-            .easter {
-                opacity: 0;
-            }
-
-            .easter:hover {
-                opacity: 1;
-            }
-
-            .text h1,
-            .text h2,
-            .text h3,
-            .text h4 {
-                width: 0;
-                overflow: hidden;
-                white-space: nowrap;
-            }
-
-            .text h1 {
-                animation: typing 1.2s steps(42, end) forwards;
-            }
-
-            .text h2 {
-                animation: typing 1.7s steps(42, end) forwards;
-                animation-delay: 1.2s;
-                margin-top: 10px;
-            }
-
-            .text h3 {
-                font-size: 1.4em;
-                animation: typing 1.7s steps(77, end) forwards;
-                animation-delay: 2.4s;
-                margin-top: 10px;
-            }
-
-            .text h4 {
-                font-size: 1.4rem;
-                animation: typing 2s steps(42, end) forwards;
-                animation-delay: 3.6s;
-                margin-top: 10px;
-            }
-
-            .text span {
-                color: #000;
-                animation-duration: 1s;
-            }
-
-            span {
-                color: #0f0;
-                font-size: 1.6rem;
-                animation: blink infinite;
-            }
-
-            .links-container {
-                display: flex;
-                position: fixed;
-                left: 24.77vw;
-                bottom: 100px;
-            }
-
-            .links {
-                margin-left: 30px;
-            }
-
-            .links img {
-                max-height: 42px;
-                border: 2px;
-                border-style: dashed;
-                border-color: #090;
-            }
-
-            .links img:hover {
-                opacity: 50%;
-            }
-
-            .ascii {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                color: #fff;
-                background-color: #000;
-                font-size: 7px;
-                font-weight: bold;
-                box-shadow: 0 0 2px 2px rgba(0, 240, 0, 0.5);
-            }
-
-            .ascii a {
-                color: #fff;
-                white-space: pre;
-            }
-
-
-/* animations */
-
-            @keyframes typing {
-                from {       
-                    width: 0;
-                }
-                to {
-                    width: 100%;
-                }
-            }
-
-            @keyframes blink {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
-            }
-
-
-/* media queries */
-
-/* iPhone Retina */ 
-            @media only screen and (min-width : 320px) and (max-width : 429px) {
-                header {
-                    padding: 0px;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                nav {
-                    display: inline-block;
-                    padding: 5px;
-                }
-
-                nav a {
-                    font-size: 16px;
-                    margin: 0.7vh;
-                    line-height: 1.4;
-                }
-
-                .flags {
-                    position: fixed;
-                    top: 1vh;
-                    right: 1.5vw;
-                }
-
-                .flags img {
-                    max-height: 18px;
-                }
-
-                .test {
-                    position: fixed;
-                    top: 10.2rcap;
-                }
-
-                .test a {
-                    font-size: 1em;
-                }
-
-                .intro {
-                    left: 0;
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 27vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
-                }
-
-                .links-container {
-                    left: 30vw;
-                    bottom: 80px;
-                }
-
-                .links img {
-                    max-height: 27px;
-                }
-
-                .text {
-                    position: fixed;
-                    top: 7vh;
-                    left: 1vh;
-                    text-align: left;
-                    font-size: 0.5em;
-                    margin-top: 40vh;
-                }
-
-                .text h2 {
-                    font-size: 0.7rem;
-                }
-
-                .text h3 {
-                    font-size: 0.7rem;
-                }
-
-                .text h4 {
-                    font-size: 0.8rem;
-                    line-height: 0.7;
-                }
-
-                .text span {
-                    font-size: 1.3rem;
-                }
-            }
-
-
-/* General Phones */ 
-            @media only screen and (min-width : 430px) and (max-width : 767px) {
-                header {
-                    padding: 0px;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                nav {
-                    display: inline-block;
-                    padding: 5px;
-                }
-
-                nav a {
-                    font-size: 16px;
-                    margin: 0.7vh;
-                    line-height: 1.4;
-                }
-
-                .flags {
-                    position: fixed;
-                    top: 1vh;
-                    right: 1.5vw;
-                }
-
-                .flags img {
-                    max-height: 22px;
-                }
-
-                .test {
-                    position: fixed;
-                    top: 10.2rcap;
-                }
-
-                .test a {
-                    font-size: 1.1em;
-                }
-
-                .intro {
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 11vh;
-                    left: 30vw;
-                    max-height: 177px;
-                    margin-top: 11vh;
-                    margin-right: 20px;
-                    border-radius: 50%;
-                }
-
-                .links-container {
-                    left: 30vw;
-                    bottom: 100px;
-                }
-
-                .links img {
-                    max-height: 33px;
-                }
-
-                .text {
-                    position: fixed;
-                    top: 42vh;
-                    left: 1vh;
-                    text-align: left;
-                    font-size: 0.5em;
-                }
-
-                .text h2 {
-                    font-size: 0.8rem;
-                }
-
-                .text h3 {
-                    font-size: 0.7rem;
-                }
-
-                .text h4 {
-                    font-size: 1rem;
-                }
-
-                .text span {
-                    font-size: 1.3rem;
-                }
-
-                .ascii {
-                    font-size: 8px;
-                }
-            }
-
-/* Tablets */
-            @media only screen and (min-width : 768px) and (max-width : 991px) {
-                header {
-                    padding: 0px;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                nav {
-                    display: inline-block;
-                    padding: 5px;
-                }
-
-                nav a {
-                    font-size: 18px;
-                    margin: 0.7vh;
-                    line-height: 1.4;
-                }
-
-                .test {
-                    position: fixed;
-                    top: 7vh;
-                }
-
-                .test a {
-                    font-size: 1.2em;
-                }
-
-                .intro {
-                    height: calc(50vh - 80px);
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 7vh;
-                    left: 31.5vw;
-                    max-height: 333px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
-                }
-
-                .links-container {
-                    top: 12vh;
-                    left: 42vw;
-                }
-
-                .text {
-                    position: fixed;
-                    top: 50vh;
-                    left: 10vw;
-                    text-align: left;
-                    font-size: 1em;
-                }
-
-                .text h2 {
-                    font-size: 1.3em;
-                }
-
-                .text h3 {
-                    font-size: 1.3em;
-                }
-
-                .text h4 {
-                    font-size: 1.5em;
-                }
-
-                .text span {
-                    font-size: 1.3em;
-                }
-
-                .ascii {
-                    font-size: 8px;
-                }
-            }
-
-
-/* Large Tablets */
-            @media only screen and (min-width : 992px) and (max-width : 1199px) {
-                header {
-                    padding: 0px;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-
-                nav {
-                    display: inline-block;
-                    padding: 10px;
-                }
-
-                nav a {
-                    font-size: 1.5em;
-                    margin: 0.7vh;
-                    line-height: 1.4;
-                }
-
-                .test {
-                    position: fixed;
-                    top: 10.2cap;
-                }
-
-                .test a {
-                    font-size: 1.3em;
-                }
-
-                .intro {
-                    left: 0;
-                    height: 50vh;
-                }
-
-                .intro img {
-                    position: fixed;
-                    top: 7vh;
-                    left: 33vw;
-                    max-height: 400px;
-                    margin-top: 11vh;
-                    border-radius: 50%;
-                }
-
-                .links-container {
-                    left: 42vw;
-                }
-
-                .text {
-                    position: fixed;
-                    top: 50vh;
-                    left: 10vw;
-                    text-align: left;
-                    font-size: 1em;
-                }
-
-                .text h2 {
-                    font-size: 1.8em;
-                }
-
-                .text h3 {
-                    font-size: 1.7em;
-                }
-
-                .text h4 {
-                    font-size: 2em;
-                }
-
-                .text span {
-                    font-size: 1.5em;
-                }
-
-                .ascii {
-                    font-size: 9px;
-                }
-            }
-
-
-/* Wide Screens */
-            @media only screen and (min-width : 1200px) {
-
-            }
-
-
-/* Retina Macs */
-            @media
-                only screen and (-webkit-min-device-pixel-ratio: 2),
-                only screen and (   min--moz-device-pixel-ratio: 2),
-                only screen and (     -o-min-device-pixel-ratio: 2/1),
-                only screen and (        min-device-pixel-ratio: 2),
-                only screen and (                min-resolution: 192dpi),
-                only screen and (                min-resolution: 2dppx) { 
-
-            }
-
-        </style>
-
     </head>
 
     <body>
+        <header class="l-header">
+        <!--- header --->
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__title"><img src="assets/img/title.png" alt="the text: $ purp0s3"></a>
+                </div>
 
-        <header>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="assets/html/pt/index.html" class="nav__link"><img src="assets/img/brazil.png" alt="Brazilian flag"></a></li>
+                        <li class="nav__item"><a href="assets/html/es/index.html" class="nav__link"><img src="assets/img/spain.png" alt="Spanish flag"></a></li>
+                    </ul>
+                </div>
 
-            <div class="title">
-                <h1>$ purp0s3<span>|</span></h1>
-            </div>
-
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="stuff/en/portfolio.html">Portfolio</a>
-                <a href="stuff/en/education.html">Education</a>
-                <a href="stuff/en/skills.html">Skills</a>
-                <a href="stuff/en/aboutme.html">About Me</a>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
             </nav>
-
-            <div class="flags">
-                <a href="stuff/pt/index.html"><img src="stuff/imgs/brazil.png" alt="Brazilian flag"></a>
-                <a href="stuff/es/index.html"><img src="stuff/imgs/spain.png" alt="Spanish flag"></a>
-            </div>
-            
-            <div class="test">
-                <a href="test project/index.html">test</a>
-            </div>
-
         </header>
 
-        <div class="intro">
+        <main class="l-main">
+            <!--- home --->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hey there,<br>I'm<span class="home__title-color"> Lucas Nascimento</span>.</h1>
+                    <h2 class="home__subtitle">I'm a dev student. São Paulo, Brazil.</h2>
 
-            <a href="untitled/looking.html"><img src="stuff/imgs/devpic.JPG" alt="a picture of me"></a>
-            
-            <div class="text">
-                <h1>Hey there,</h1><h1>I'm Lucas Nascimento.<a class="easter">purp0s3</a></h1>
-                <h2>I'm an IT student into development and programming.</h2>
-                <br>
-                <h3>
-                    status:
-                        <a href="https://github.com/purp0s3?tab=repositories">
-                            fundamentally human, beginner developer.
-                        </a>
-                        <br>
-                    </h3>
-                    <h3>
-                        location:
-                        <a href="https://en.wikipedia.org/wiki/São_Paulo">
-                            São Paulo, Brazil, Earth, Sun, Milky Way.
-                        </a>
-                        <br>
-                    </h3>
-                    <h3>
-                        contact:
-                        <a href="mailto:purp0s3@icloud.com">
-                            purp0s3@icloud.com
-                        </a>
-                    </h3>
-                </h3>
-                <h4>
-                    <p>
-                    welcome to my place.<span>|</span></p>
-                </h4>      
-            </div>
-        </div>
+                    <a href="mailto:purp0s3@icloud.com" class="button">Contact me!</a>
+                </div>
 
-        <div class="links-container">
-            <div class="links">
-                <a href="https://www.linkedin.com/in/lucasnasc04"><img src="stuff/imgs/linkedin.png" alt="LinkedIn logo"></a>
-            </div>
-            <div class="links">
-                <a href="https://github.com/purp0s3/"><img src="stuff/imgs/github.png" alt="GitHub logo"></a>
-            </div>
-        </div>
-    
-        <div class="ascii">
-            <a>                                
-                          _______         ________
-______  __ _______________ \   _  \   _____\_____  \
-\____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
- |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
- |   __/|____/ |__|  |   __/ \_____  /____  >______  /
-|__|                |__|          \/     \/       \/
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/purp0s3/" target="_blank" class="home__social-icon"><i class="bx bxl-github"></i></a>
+                </div>
 
-            </a> 
-        </div>
-    
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="111" href="assets/img/devpic.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--- about --->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/babyme.jpg" alt="me as a baby sitting in front of a computer"><br>
+                        <a>são paulo, december 2003</a>
+                    </div>
+                    
+                    <div>
+                        <h2 class="about__subtitle">My purpose is to develop.</h2>
+                        <p class="about__text">I'm always willing to learn more.<br>No matter what language, framework, system. If it exists it can be learnt. I'm inclined to front end but not restricted to it.<br><br>Background scenes: jailbreak, hackintosh, tweaking and mods in general.<br><br>Brazilian Portuguese (native), English (fluent), Spanish (intermediate).<br><br>Windows, macOS and Linux. Daily. Why not?</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--- skills --->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Languages</h2>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-html5 skills__icon"></i>
+                                <span class="skills__name">HTML</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚫️ ⚫️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-css3 skills__icon"></i>
+                                <span class="skills__name">CSS</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                            
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚫️ ⚫️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/swift-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;SWIFT</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                            
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚪️ ⚪️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/objc-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;OBJECTIVE-C</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                            
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚪️ ⚪️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/java-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;JAVA</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                            
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚫️ ⚪️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-javascript skills__icon"></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚪️ ⚪️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/python-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;PYTHON</span>
+                            </div>
+                            <div class="skills__bar">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚪️ ⚪️ ⚪️</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/sql-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;SQL</span>
+                            </div>
+                            <div class="skills__bar">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__knowledge">⚫️ ⚫️ ⚫️ ⚪️</span>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Tools & IDEs</h2>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/mysql-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;MYSQL</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-git skills__icon"></i>
+                                <span class="skills__name">GIT</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/wamp-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;WAMPSERVER</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/apache-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;APACHE TOMCAT</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/vscode-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;VS CODE</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/eclipse-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;ECLIPSE</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/xcode-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;XCODE</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-android skills__icon"></i>
+                                <span class="skills__name">ANDROID STUDIO</span>
+                            </div>
+
+                            <div class="skills__bar"></div>
+                        </div>
+                    </div>
+
+                <div class="skills__container bd-grid">          
+                    <div>
+                        <h2 class="skills__subtitle">Others</h2>
+                        
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/office-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;OFFICE</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-adobe skills__icon"></i>
+                                <span class="skills__name">PHOTOSHOP</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i><svg class="skills__icon" height="25" width="25"><image class="skills__icon" height="25" width="25" href="assets/img/logo/vegas-logo.svg"></svg></i>
+                                <span class="skills__name">&nbsp;&nbsp;VEGAS PRO</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+                        </div>
+
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class="bx bxl-figma skills__icon"></i>
+                                <span class="skills__name">FIGMA</span>
+                            </div>
+                            
+                            <div class="skills__bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--- portfolio --->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Portfolio</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <a href="https://github.com/purp0s3/Brinks" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/brinks-img.png" alt="a Toy Store website homepage">
+                        <p><b>Brinks<br>a toy store website mockup</b></p>
+                        <p>built using <b>Java, JSP, MySQL</b> and <b>Apache Tomcat</b></p>
+                        <p>source & demo</p>
+                    </a>
+
+                    <a href="https://github.com/purp0s3/DummyPDM" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/DummyPDM-img.png" alt="iOS app pages for login, account creation and profile">
+                        <p><b>DummyPDM<br>an iOS app mockup</b></p>
+                        <p>built using <b>Swift</b> and <b>Firebase</b></p>
+                        <p>source & demo</p>
+                    </a>
+
+                    <a href="https://github.com/purp0s3/RandomPicture" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/RandomPicture-img.png" alt="iOS app pages with random pictures and background colors">
+                        <p><b>RandomPicture<br>a basic iOS app that displays random pictures</b></p>
+                        <p>built using <b>Swift</b></p>
+                        <p>source & demo</p>
+                    </a>
+
+                    <a href="https://www.figma.com/file/uwizIy4sS7QuZMPBivPY7I/COMP?type=design&node-id=0-1&mode=design" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/COMP-img.png" alt="Figma app prototype and it's pages">
+                        <p><b>COMP<br>a Figma iOS app prototype</b></p>
+                        <p>built using <b>Figma</b></p>
+                        <p>source & demo</p>
+                    </a>
+
+                    <a href="https://www.figma.com/file/jMv5JyVLP6Hx7D2XWqnzQm/DengueZer%40?type=design&node-id=0-1&mode=design" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/DengueZer@-img.png" alt="Figma app prototype and it's pages">
+                        <p><b>DengueZer@<br>a Figma iOS app prototype</b></p>
+                        <p>built using <b>Figma</b></p>
+                        <p>source & demo</p>
+                    </a>
+
+                    <a href="https://github.com/purp0s3/Tweaked-iOS-Apps" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/Tweaked iOS Apps-img.png" alt="homepage of the repository">
+                        <p><b>Tweaked iOS Apps<br>Tweaks injected into iOS apps</b></p>
+                        <p>built using <b>HTML, Markdown, Azule</b> and <b>Theos</b></p>
+                        <p>source</p>
+                    </a>
+
+                    <a href="v1/index.html" target="_blank" class="portfolio__img">
+                        <img src="assets/img/portfolio/purp0s3-img.png" alt="homepage of this website's old version">
+                        <p><b>purp0s3.com<br>this website's old version</b></p>
+                        <p>built using <b>HTML</b> and <b>CSS</b></p>
+                        <p>old homepage</p>
+                    </a>
+                </div>
+            </section>
+
+            <!--- education --->
+            <section class="education section" id="education">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education__container bd-grid">
+                    <a class="education__img">
+                        <img src="assets/img/unicid.png" alt="UNICID College logo">
+                        <p><b>System Analysis and Development Technologist Degree</b></p>
+                        <p><b>City of São Paulo's University (UNICID)</b></p>
+                        <p>2022 - 2023</p>
+                    </a>
+
+                    <a class="education__img">
+                        <img src="assets/img/unip.png" alt="UNIP College logo">
+                        <p><b>Psychology Bachelor's Degree</b></p>
+                        <p><b>Paulista University (UNIP)</b></p>
+                        <p>2020 - 2021 (drop out)</p>
+                    </a>
+
+                    <a class="education__img">
+                        <img src="assets/img/ILAC.jpeg" alt="ILAC School logo">
+                        <p><b>English Proficiency Course</b></p>
+                        <p><b>ILAC @ Toronto</b></p>
+                        <p>January 2018</p>
+                    </a>
+
+                    <a class="education__img">
+                        <img src="assets/img/tobias.jpg" alt="Tobias de Aguiar School logo">
+                        <p><b>Preschool to High School</b></p>
+                        <p><b>Colégio Tobias de Aguiar</b></p>
+                        <p>2007 - 2019</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <!--- footer --->
+        <footer class="footer">
+            <p class="footer__title">purp0s3</p>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/purp0s3/" target="_blank" class="footer__icon"><i class="bx bxl-github"></i></a>
+                <a href="mailto:purp0s3@icloud.com" class="footer__icon"><i class="bx bx-mail-send"></i></a>
+            </div>
+            <p class="footer__copy">&#169; 2024, Lucas Nascimento.<br>All rights reserved.</p>
+        </footer>
+
+        <!--- scroll reveal animation --->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--- javascript --->
+        <script src="assets/js/main.js"></script>
     </body>
-
 </html>

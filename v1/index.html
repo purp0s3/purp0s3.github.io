@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="stuff/imgs/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="stuff/imgs/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="stuff/imgs/favicon/favicon-16x16.png">
+        <link rel="manifest" href="stuff/imgs/favicon/site.webmanifest">
+        
+        <title>purp0s3</title>
+
+        <style>
+            
+            body {
+                font-family: 'Courier New', monospace;
+                margin: 0;
+                padding: 0;
+                background-color: #fff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 100vh;
+            }
+
+            header {
+                width: 100%;
+                background-color: #000;
+                padding: 20px 10px;
+                position: fixed;
+                top: 0;
+                display: flex;
+                align-items: center;
+                box-shadow: 0 2px 2px rgba(0, 240, 0, 0.5);
+            }
+
+            .title {
+                color: #0f0;
+                padding-left: 4vw;
+            }
+
+            .title h1 {
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: typing 0.5s steps(20, end) forwards;
+            }
+
+            .title span {
+                color: #0f0;
+                font-size: 32px;
+                animation: blink infinite;
+                animation-duration: 1s;
+            }
+
+            nav {
+                display: flex;
+                gap: 6vh;
+                margin-left: 6vw;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            nav a:hover {
+                color: #090;
+            }
+
+            .active {
+                text-decoration: underline;
+                text-decoration-color: #0f0; 
+            }
+
+            .active:hover {
+                color: #090;
+                text-decoration: line-through;
+                text-decoration-color: #900;
+            }
+
+            .test {
+                position: fixed;
+                right: 3vw;
+            }
+
+            .test a {
+                color: #f00;
+                text-decoration: none;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+
+            .test a:hover {
+                color: #900;
+            }
+
+            .flags {
+                position: fixed;
+                top: 1vh;
+                right: 1.5vw;
+            }
+
+            .flags img {
+                max-height: 27px;
+            }
+
+            .flags img:hover {
+                opacity: 75%;
+            }
+
+            .intro {
+                display: flex;
+                position: fixed;
+                top: 18vh;
+                left: 14%;
+                align-items: center;
+                -webkit-box-align: center;
+                justify-content: flex-start;
+                -webkit-box-direction: flex-start;
+                -webkit-box-pack: flex-start;
+                padding: 42px 0 0 42px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            .intro img {
+                max-height: 444px;
+                margin-top: 1dvh;
+                margin-right: 20px;
+                border-radius: 50%;
+                border-style: outset;
+                border-width: 3px;
+                border-color: #090;
+            }
+
+            .text {
+                margin-top: 1dvh;
+                text-align: left;
+            }
+
+            .text a {
+                color: #090;
+            }
+
+            .text p {
+                color: #000;
+            }
+
+            .text span {
+                color: #000;
+            }
+
+            .easter {
+                opacity: 0;
+            }
+
+            .easter:hover {
+                opacity: 1;
+            }
+
+            .text h1,
+            .text h2,
+            .text h3,
+            .text h4 {
+                width: 0;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .text h1 {
+                animation: typing 1.2s steps(42, end) forwards;
+            }
+
+            .text h2 {
+                animation: typing 1.7s steps(42, end) forwards;
+                animation-delay: 1.2s;
+                margin-top: 10px;
+            }
+
+            .text h3 {
+                font-size: 1.4em;
+                animation: typing 1.7s steps(77, end) forwards;
+                animation-delay: 2.4s;
+                margin-top: 10px;
+            }
+
+            .text h4 {
+                font-size: 1.4rem;
+                animation: typing 2s steps(42, end) forwards;
+                animation-delay: 3.6s;
+                margin-top: 10px;
+            }
+
+            .text span {
+                color: #000;
+                animation-duration: 1s;
+            }
+
+            span {
+                color: #0f0;
+                font-size: 1.6rem;
+                animation: blink infinite;
+            }
+
+            .links-container {
+                display: flex;
+                position: fixed;
+                left: 24.77vw;
+                bottom: 100px;
+            }
+
+            .links {
+                margin-left: 30px;
+            }
+
+            .links img {
+                max-height: 42px;
+                border: 2px;
+                border-style: dashed;
+                border-color: #090;
+            }
+
+            .links img:hover {
+                opacity: 50%;
+            }
+
+            .ascii {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                color: #fff;
+                background-color: #000;
+                font-size: 7px;
+                font-weight: bold;
+                box-shadow: 0 0 2px 2px rgba(0, 240, 0, 0.5);
+            }
+
+            .ascii a {
+                color: #fff;
+                white-space: pre;
+            }
+
+
+/* animations */
+
+            @keyframes typing {
+                from {       
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+
+            @keyframes blink {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+
+/* media queries */
+
+/* iPhone Retina */ 
+            @media only screen and (min-width : 320px) and (max-width : 429px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .flags {
+                    position: fixed;
+                    top: 1vh;
+                    right: 1.5vw;
+                }
+
+                .flags img {
+                    max-height: 18px;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
+
+                .test a {
+                    font-size: 1em;
+                }
+
+                .intro {
+                    left: 0;
+                    height: calc(50vh - 80px);
+                }
+
+                .intro img {
+                    position: fixed;
+                    top: 11vh;
+                    left: 27vw;
+                    max-height: 177px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .links-container {
+                    left: 30vw;
+                    bottom: 80px;
+                }
+
+                .links img {
+                    max-height: 27px;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 7vh;
+                    left: 1vh;
+                    text-align: left;
+                    font-size: 0.5em;
+                    margin-top: 40vh;
+                }
+
+                .text h2 {
+                    font-size: 0.7rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 0.8rem;
+                    line-height: 0.7;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
+                }
+            }
+
+
+/* General Phones */ 
+            @media only screen and (min-width : 430px) and (max-width : 767px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 16px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .flags {
+                    position: fixed;
+                    top: 1vh;
+                    right: 1.5vw;
+                }
+
+                .flags img {
+                    max-height: 22px;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2rcap;
+                }
+
+                .test a {
+                    font-size: 1.1em;
+                }
+
+                .intro {
+                    height: calc(50vh - 80px);
+                }
+
+                .intro img {
+                    position: fixed;
+                    top: 11vh;
+                    left: 30vw;
+                    max-height: 177px;
+                    margin-top: 11vh;
+                    margin-right: 20px;
+                    border-radius: 50%;
+                }
+
+                .links-container {
+                    left: 30vw;
+                    bottom: 100px;
+                }
+
+                .links img {
+                    max-height: 33px;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 42vh;
+                    left: 1vh;
+                    text-align: left;
+                    font-size: 0.5em;
+                }
+
+                .text h2 {
+                    font-size: 0.8rem;
+                }
+
+                .text h3 {
+                    font-size: 0.7rem;
+                }
+
+                .text h4 {
+                    font-size: 1rem;
+                }
+
+                .text span {
+                    font-size: 1.3rem;
+                }
+
+                .ascii {
+                    font-size: 8px;
+                }
+            }
+
+/* Tablets */
+            @media only screen and (min-width : 768px) and (max-width : 991px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 5px;
+                }
+
+                nav a {
+                    font-size: 18px;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 7vh;
+                }
+
+                .test a {
+                    font-size: 1.2em;
+                }
+
+                .intro {
+                    height: calc(50vh - 80px);
+                }
+
+                .intro img {
+                    position: fixed;
+                    top: 7vh;
+                    left: 31.5vw;
+                    max-height: 333px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .links-container {
+                    top: 12vh;
+                    left: 42vw;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 50vh;
+                    left: 10vw;
+                    text-align: left;
+                    font-size: 1em;
+                }
+
+                .text h2 {
+                    font-size: 1.3em;
+                }
+
+                .text h3 {
+                    font-size: 1.3em;
+                }
+
+                .text h4 {
+                    font-size: 1.5em;
+                }
+
+                .text span {
+                    font-size: 1.3em;
+                }
+
+                .ascii {
+                    font-size: 8px;
+                }
+            }
+
+
+/* Large Tablets */
+            @media only screen and (min-width : 992px) and (max-width : 1199px) {
+                header {
+                    padding: 0px;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                nav {
+                    display: inline-block;
+                    padding: 10px;
+                }
+
+                nav a {
+                    font-size: 1.5em;
+                    margin: 0.7vh;
+                    line-height: 1.4;
+                }
+
+                .test {
+                    position: fixed;
+                    top: 10.2cap;
+                }
+
+                .test a {
+                    font-size: 1.3em;
+                }
+
+                .intro {
+                    left: 0;
+                    height: 50vh;
+                }
+
+                .intro img {
+                    position: fixed;
+                    top: 7vh;
+                    left: 33vw;
+                    max-height: 400px;
+                    margin-top: 11vh;
+                    border-radius: 50%;
+                }
+
+                .links-container {
+                    left: 42vw;
+                }
+
+                .text {
+                    position: fixed;
+                    top: 50vh;
+                    left: 10vw;
+                    text-align: left;
+                    font-size: 1em;
+                }
+
+                .text h2 {
+                    font-size: 1.8em;
+                }
+
+                .text h3 {
+                    font-size: 1.7em;
+                }
+
+                .text h4 {
+                    font-size: 2em;
+                }
+
+                .text span {
+                    font-size: 1.5em;
+                }
+
+                .ascii {
+                    font-size: 9px;
+                }
+            }
+
+
+/* Wide Screens */
+            @media only screen and (min-width : 1200px) {
+
+            }
+
+
+/* Retina Macs */
+            @media
+                only screen and (-webkit-min-device-pixel-ratio: 2),
+                only screen and (   min--moz-device-pixel-ratio: 2),
+                only screen and (     -o-min-device-pixel-ratio: 2/1),
+                only screen and (        min-device-pixel-ratio: 2),
+                only screen and (                min-resolution: 192dpi),
+                only screen and (                min-resolution: 2dppx) { 
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="title">
+                <h1>$ purp0s3<span>|</span></h1>
+            </div>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="stuff/en/portfolio.html">Portfolio</a>
+                <a href="stuff/en/education.html">Education</a>
+                <a href="stuff/en/skills.html">Skills</a>
+                <a href="stuff/en/aboutme.html">About Me</a>
+            </nav>
+
+            <div class="flags">
+                <a href="stuff/pt/index.html"><img src="stuff/imgs/brazil.png" alt="Brazilian flag"></a>
+                <a href="stuff/es/index.html"><img src="stuff/imgs/spain.png" alt="Spanish flag"></a>
+            </div>
+            
+            <div class="test">
+                <a href="test project/index.html">test</a>
+            </div>
+
+        </header>
+
+        <div class="intro">
+
+            <a href="untitled/looking.html"><img src="stuff/imgs/devpic.JPG" alt="a picture of me"></a>
+            
+            <div class="text">
+                <h1>Hey there,</h1><h1>I'm Lucas Nascimento.<a class="easter">purp0s3</a></h1>
+                <h2>I'm an IT student into development and programming.</h2>
+                <br>
+                <h3>
+                    status:
+                        <a href="https://github.com/purp0s3?tab=repositories">
+                            fundamentally human, beginner developer.
+                        </a>
+                        <br>
+                    </h3>
+                    <h3>
+                        location:
+                        <a href="https://en.wikipedia.org/wiki/São_Paulo">
+                            São Paulo, Brazil, Earth, Sun, Milky Way.
+                        </a>
+                        <br>
+                    </h3>
+                    <h3>
+                        contact:
+                        <a href="mailto:purp0s3@icloud.com">
+                            purp0s3@icloud.com
+                        </a>
+                    </h3>
+                </h3>
+                <h4>
+                    <p>
+                    welcome to my place.<span>|</span></p>
+                </h4>      
+            </div>
+        </div>
+
+        <div class="links-container">
+            <div class="links">
+                <a href="https://www.linkedin.com/in/lucasnasc04"><img src="stuff/imgs/linkedin.png" alt="LinkedIn logo"></a>
+            </div>
+            <div class="links">
+                <a href="https://github.com/purp0s3/"><img src="stuff/imgs/github.png" alt="GitHub logo"></a>
+            </div>
+        </div>
+    
+        <div class="ascii">
+            <a>                                
+                          _______         ________
+______  __ _______________ \   _  \   _____\_____  \
+\____ \|  |  \_  __ \____ \/  /_\  \ /  ___/ _(__  <
+ |  |_> >  |  /|  | \/  |_> >  \_/   \\___ \ /       \
+ |   __/|____/ |__|  |   __/ \_____  /____  >______  /
+|__|                |__|          \/     \/       \/
+
+            </a> 
+        </div>
+    
+    </body>
+
+</html>
