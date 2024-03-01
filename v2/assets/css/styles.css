@@ -12,6 +12,7 @@
         --body-font: "Poppins", sans-serif;
         --big-font-size: 2rem;
         --h2-font-size: 1.25rem;
+        --h3-font-size: 1.12rem;
         --normal-font-size: .938rem;
         --smaller-font-size: .75rem;
 
@@ -29,6 +30,7 @@
         :root {
             --big-font-size: 3.5rem;
             --h2-font-size: 2rem;
+            --h3-font-size: 1.25rem;
             --normal-font-size: 1rem;
             --smaller-font-size: .875rem;
         }
@@ -119,7 +121,7 @@
     }
 
 
-/* --- nav --- */
+/* --- header nav --- */
     .nav {
         height: var(--header-height);
         display: flex;
@@ -171,7 +173,7 @@
             position: fixed;
             top: var(--header-height);
             right: -100%;
-            width: 80%;
+            width: 50%;
             height: 100%;
             padding: 2rem;
             background-color: var(--second-color);
@@ -253,8 +255,6 @@
         width: 360px;
     }
 
-
-/* --- buttons --- */
     .button {
         display: inline-block;
         background-color: var(--first-color);
@@ -282,6 +282,7 @@
 
     .about__img {
         justify-self: center;
+        z-index: 7;
     }
 
     .about__img a {
@@ -341,45 +342,74 @@
     }
 
 
-/* --- work --- */
-    .work__container {
+/* --- portfolio --- */
+    .portfolio__container {
         row-gap: 2rem;
     }
 
-    .work__img {
+    .portfolio__img {
         box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
         border-radius: 0.5rem;
-        overflow: hidden;
+        text-align: center;
+        cursor: default;
     }
 
-    .work__img img {
-        transition: 1s;
-    }
-
-    .work__img img:hover {
-        transform: scale(1.1);
-    }
-
-
-/* --- contact --- */
-    .contact__input {
-        width: 100%;
-        font-size: var(--normal-font-size);
-        font-weight: var(--font-semi);
-        padding: 1rem;
+    .portfolio__img img {
         border-radius: 0.5rem;
-        border: 1.5px solid var(--second-color);
-        outline: none;
-        margin-bottom: var(--mb-4);
+        transition: transform .2s;
     }
 
-    .contact__button {
-        display: block;
-        border: none;
-        outline: none;
-        font-size: var(--normal-font-size);
+    .portfolio__img p {
+        color: var(--first-color);
+        margin: var(--mb-2);
+    }
+
+    .portfolio__img p:nth-child(3) {
+        color: #000;
+        margin: var(--mb-2);
+        font-size: var(--smaller-font-size);
+    }
+
+    .portfolio__img p:nth-child(4) {
+        color: var(--first-color);
+        margin: var(--mb-2);
+        font-size: var(--smaller-font-size);
         cursor: pointer;
-        margin-left: auto;
+    }
+
+/* --- education --- */
+    .education__container {
+        row-gap: 2rem;
+    }
+
+    .education__img {
+        box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+        border-radius: 0.5rem;
+        text-align: center;
+    }
+
+    .education__img img {
+        border-radius: 0.5rem;
+        max-height: 150px;
+        margin: auto;
+    }
+
+    .education__img p {
+        color: var(--first-color);
+        margin: var(--mb-2);
+        font-size: var(--h3-font-size);
+    }
+
+    .education__img p:nth-child(3) {
+        color: #000;
+        margin: var(--mb-2);
+        font-size: var(--normal-font-size);
+    }
+
+    .education__img p:nth-child(4) {
+        color: #000;
+        margin: var(--mb-2);
+        font-size: var(--smaller-font-size);
     }
 
 
@@ -457,19 +487,16 @@
             column-gap: 1rem;
         }
 
-        .work__container {
+        .portfolio__container {
             grid-template-columns: repeat(2, 1fr);
             column-gap: 2rem;
             padding-top: 2rem;
         }
 
-        .contact__form {
-            width: 360px;
+        .education__container {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
             padding-top: 2rem;
-        }
-
-        .contact__container {
-            justify-items: center;
         }
     }
 
@@ -542,12 +569,22 @@
         .skills__container {
             grid-template-columns: repeat(2, 1fr);
             column-gap: 2rem;
-            align-items: center;
+            align-items: start;
             text-align: initial;
         }
 
-        .work__container {
+        .portfolio__container {
             grid-template-columns: repeat(3, 1fr);
+            column-gap: 2rem;
+        }
+
+        .portfolio__img img:hover {
+            transform: scale(2);
+            background-color: var(--first-color);
+        }
+
+        .education__container {
+            grid-template-columns: repeat(2, 1fr);
             column-gap: 2rem;
         }
     }
