@@ -9,6 +9,9 @@
         --first-color: hsl(var(--hue-color), 89%, 60%);
         --second-color: hsl(var(--hue-color), 56%, 12%);
 
+        --black: #000;
+        --white: #fff;
+
         --body-font: "Poppins", sans-serif;
         --big-font-size: 2rem;
         --h2-font-size: 1.25rem;
@@ -116,7 +119,7 @@
         top: 0;
         left: 0;
         z-index: var(--z-fixed);
-        background-color: #fff;
+        background-color: var(--white);
         box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
     }
 
@@ -258,7 +261,7 @@
     .button {
         display: inline-block;
         background-color: var(--first-color);
-        color: #fff;
+        color: var(--white);
         padding: 0.75rem 2.5rem;
         font-weight: var(--font-semi);
         border-radius: 0.5rem;
@@ -286,7 +289,7 @@
     }
 
     .about__img a {
-        color: gray;
+        font-size: var(--smaller-font-size);
     }
 
     .about__img img {
@@ -365,7 +368,7 @@
     }
 
     .portfolio__img p:nth-child(3) {
-        color: #000;
+        color: var(--black);
         margin: var(--mb-2);
         font-size: var(--smaller-font-size);
     }
@@ -401,13 +404,13 @@
     }
 
     .education__img p:nth-child(3) {
-        color: #000;
+        color: var(--black);
         margin: var(--mb-2);
         font-size: var(--normal-font-size);
     }
 
     .education__img p:nth-child(4) {
-        color: #000;
+        color: var(--black);
         margin: var(--mb-2);
         font-size: var(--smaller-font-size);
     }
@@ -602,4 +605,10 @@
         .home__img {
             width: 450px;
         }
+    }
+
+
+/* dark mode */
+    @media (prefers-color-scheme:dark) {
+
     }

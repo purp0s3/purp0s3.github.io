@@ -54,6 +54,16 @@ const sr = ScrollReveal({
 });
 
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .education__img',{interval: 200}); 
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 100}); 
+sr.reveal('.home__social-icon',{interval: 50}); 
+sr.reveal('.skills__data, .portfolio__img, .education__img',{interval: 50}); 
+
+const srt = ScrollReveal({
+    origin: 'left',
+    distance: '60px',
+    duration: 2000,
+    delay: 200,
+//     reset: true
+});
+
+srt.reveal('.nav__title',{});
