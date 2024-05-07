@@ -48,8 +48,8 @@ window.addEventListener('scroll', scrollActive)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2000,
-    delay: 200,
+    duration: 1500,
+    delay: 100,
 //     reset: true
 });
 
@@ -61,8 +61,8 @@ sr.reveal('.skills__data, .portfolio__img, .education__img',{interval: 50});
 const srt = ScrollReveal({
     origin: 'left',
     distance: '60px',
-    duration: 2000,
-    delay: 200,
+    duration: 1500,
+    delay: 100,
 //     reset: true
 });
 
