@@ -54,6 +54,7 @@
         font-family: var(--body-font);
         font-size: var(--normal-font-size);
         color: var(--second-color);
+        height: 100%;
     }
 
     h1, h2, p {
@@ -446,6 +447,15 @@
         font-size: var(--smaller-font-size);
     }
 
+/* --- pop --- */
+    .pop {
+        font-size: var(--h3-font-size);
+        text-align: center;
+    }
+
+    .pop a {
+        text-decoration: underline;
+    }
 
 /* --- media queries --- */
     @media screen and (max-width: 320px) {
@@ -584,7 +594,7 @@
         }
 
         .portfolio__img img:hover {
-            transform: scale(2);
+            transform: scale(1.2);
             background-color: var(--first-color);
         }
 
