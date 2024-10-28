@@ -43,7 +43,6 @@ header {
     overflow: hidden;
     white-space: nowrap;
     animation: typing 0.7s steps(33, end) forwards;
-    margin-left: 20px;
 }
 
 .header__title span {
@@ -68,8 +67,21 @@ header a:hover {
 .header__navbar {
     display: flex;
     justify-content: center;
-    width: 72%;
+    flex: 1;
+    margin-left: -77px;
 }
+
+.header__navbarP {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin-left: -149px;
+}
+
+.header__navbarP a {
+    font-size: 24px;
+}
+  
 
 .header__navbar a {
     font-size: 24px;
@@ -78,7 +90,7 @@ header a:hover {
 .search-bar {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
   }
 
@@ -97,6 +109,7 @@ header a:hover {
     color: white;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 #search-button:hover {
@@ -104,7 +117,7 @@ header a:hover {
 }
 
 #posts {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -117,23 +130,67 @@ header a:hover {
     padding: 25px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
-    max-width: 800px;
+    width: 90%;
     text-align: center;
+}
+
+.post p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post-date {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 20px;
+    width: 100%;
 }
 
 .post-post {
     background: var(--white);
-    margin: 25px 0;
-    padding: 25px;
+    padding: 10px;
     border-radius: 5px;
     width: 100%;
     max-width: 800px;
     text-align: center;
 }
 
+.post-post a {
+    font-size: 32px;
+    text-decoration: none;
+}
+
 .post-post p {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.post-postL {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.post-postL p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.post-postR {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    text-align: right;
+}
+
+.post-postR p {
+    font-size: 22px;
     font-weight: bold;
 }
 
@@ -188,47 +245,62 @@ header a:hover {
 /* media queries */
 @media screen and (max-width: 576px) {
     header {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: center; /* Center align items */
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__navbar {
-        width: 100%; /* Make navbar full width */
-        justify-content: space-around; /* Distribute space evenly */
+        width: 100%;
+        justify-content: space-around;
+        margin-left: auto;
+    }
+
+    .header__navbarP {
+        width: 100%;
+        justify-content: space-around;
+        margin-left: auto;
     }
 
     .search-bar {
-        margin-top: 20px; /* Add some space above the search bar */
+        margin-top: 20px;
     }
 
     .search-bar input {
-        min-width: 100%; /* Make input full width */
+        min-width: 100%;
     }
 
     .post {
-        width: 90%; /* Reduce width on small screens */
-        margin: 15px 0; /* Reduce margin */
+        width: 80%;
+        margin: 15px 0;
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack elements vertically on medium screens */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__navbar {
-        width: 100%; /* Make navbar full width */
-        justify-content: space-around; /* Distribute space evenly */
+        width: 100%;
+        justify-content: space-around;
+        margin-left: auto;
+    }
+
+    .header__navbarP {
+        width: 100%;
+        justify-content: space-around;
+        margin-left: auto;
     }
 
     .search-bar {
-        margin-top: 20px; /* Add some space above the search bar */
+        margin-top: 20px;
     }
 
     .post {
-        width: 85%; /* Keep posts relatively wide */
-        margin: 20px 0; /* Increase margin */
+        width: 85%;
+        margin: 20px 0;
     }
 }
 
