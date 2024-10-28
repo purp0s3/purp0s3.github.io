@@ -161,8 +161,15 @@
         background-color: var(--first-color);
     }
 
-    .nav__title img {
-        max-height: 33px;
+    .nav__title {
+        color: var(--first-color);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    
+    .nav__title span {
+        color: var(--first-color);
+        animation: blink 1s infinite ease-in-out;
     }
 
     .nav__toggle {
@@ -426,6 +433,9 @@
         text-align: center;
         font-weight: var(--font-semi);
         padding: 2rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
     }
 
     .footer__title {
@@ -456,6 +466,17 @@
     .pop a {
         text-decoration: underline;
     }
+
+/* --- animations --- */
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 /* --- media queries --- */
     @media screen and (max-width: 320px) {

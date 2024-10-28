@@ -1,0 +1,238 @@
+:root {
+    --black: #000;
+    --white: #fff;
+    --green: #0f0;
+    --hover-green: #090;
+
+    --hue-color: 260; /* purple */
+    --first-color: hsl(var(--hue-color), 89%, 60%);
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    background-color: var(--black);
+    box-shadow: 0 2px 2px rgba(0, 240, 0, 0.5);
+}
+
+.header__title {
+    color: var(--green);
+}
+
+.header__titleP {
+    color: var(--first-color);
+}
+
+.header__titleP:hover {
+    color: grey;
+}
+
+
+.header__title h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 0.7s steps(33, end) forwards;
+    margin-left: 20px;
+}
+
+.header__title span {
+    color: var(--green);
+    font-size: 32px;
+    animation: blink 1s infinite ease-in-out;
+}
+
+
+header a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px;
+}
+
+header a:hover {
+    color: var(--hover-green);
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: center;
+    width: 72%;
+}
+
+.header__navbar a {
+    font-size: 24px;
+}
+  
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    min-width: 170px;
+    flex: 1;
+}
+
+#search-button {
+    padding: 10px;
+    background: var(--first-color);
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background: grey;
+}
+
+#posts {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post {
+    background: var(--white);
+    margin: 25px 0;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.post-post {
+    background: var(--white);
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.post-post p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-weight: 600;
+    padding: 1.5rem 0;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer__social {
+    margin-bottom: 1.5rem;
+}
+
+.footer__icon {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0 1rem;
+}
+
+.footer__copy {
+    font-size: .82rem;
+}
+
+@keyframes typing {
+    from {       
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* media queries */
+@media screen and (max-width: 576px) {
+    header {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .header__navbar {
+        width: 100%; /* Make navbar full width */
+        justify-content: space-around; /* Distribute space evenly */
+    }
+
+    .search-bar {
+        margin-top: 20px; /* Add some space above the search bar */
+    }
+
+    .search-bar input {
+        min-width: 100%; /* Make input full width */
+    }
+
+    .post {
+        width: 90%; /* Reduce width on small screens */
+        margin: 15px 0; /* Reduce margin */
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack elements vertically on medium screens */
+        align-items: center; /* Center align items */
+    }
+
+    .header__navbar {
+        width: 100%; /* Make navbar full width */
+        justify-content: space-around; /* Distribute space evenly */
+    }
+
+    .search-bar {
+        margin-top: 20px; /* Add some space above the search bar */
+    }
+
+    .post {
+        width: 85%; /* Keep posts relatively wide */
+        margin: 20px 0; /* Increase margin */
+    }
+}
+
+/* dark mode */
+    @media (prefers-color-scheme:dark) {
+
+    }
