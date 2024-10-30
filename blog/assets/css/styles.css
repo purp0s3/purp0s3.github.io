@@ -129,7 +129,7 @@ header a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
-    max-width: 800px;
+    max-width: 666px;
     text-align: center;
 }
 
@@ -152,6 +152,15 @@ header a:hover {
 .post-post {
     width: 100%;
     max-width: 800px;
+}
+
+.post-post a {
+    color: var(--first-color);
+    text-decoration: none;
+}
+
+.post-post a:hover {
+    color: var(--hover-green);
 }
 
 .post-post h1 {
