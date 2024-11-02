@@ -19,7 +19,6 @@ body {
 }
 
 header {
-    width: 100%;
     padding: 20px 10px;
     display: flex;
     background-color: var(--black);
@@ -228,25 +227,20 @@ header a:hover {
 /* media queries */
 @media screen and (max-width: 576px) {
     header {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__navbar {
-        width: 100%; /* Make navbar full width */
-        justify-content: space-around; /* Distribute space evenly */
+        justify-content: space-around;
     }
 
     .search-bar {
-        margin-top: 20px; /* Add some space above the search bar */
-    }
-
-    .search-bar input {
-        min-width: 100%; /* Make input full width */
+        margin-top: 20px;
     }
 
     .post {
-        width: 90%; /* Reduce width on small screens */
+        width: 75%; /* Reduce width on small screens */
         margin: 15px 0; /* Reduce margin */
     }
 }
