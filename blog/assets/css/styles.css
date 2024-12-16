@@ -133,12 +133,12 @@ header a:hover {
 }
 
 .post p {
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: normal;
+    font-size: 20px;
 }
 
-.post h3 {
-    font-weight: normal;
+.post h2 a {
+    font-weight: bold;
 }
 
 .post-date {
@@ -168,12 +168,19 @@ header a:hover {
 
 .post-post h2 {
     text-align: center;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.post-post h3 {
+    text-align: center;
+    font-size: 24px;
 }
 
 .post-post p {
-    text-align: left;
+    text-align: justify;
     font-size: 22px;
-    font-weight: bold;
+    line-height: 1.5;
 }
 
 
@@ -182,7 +189,6 @@ header a:hover {
     color: var(--white);
     text-align: center;
     font-weight: 600;
-    padding: 1.5rem 0;
     position: relative;
     margin-top: auto;
 }
@@ -240,29 +246,29 @@ header a:hover {
     }
 
     .post {
-        width: 75%; /* Reduce width on small screens */
-        margin: 15px 0; /* Reduce margin */
+        width: 75%;
+        margin: 15px 0;
     }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
     header {
-        flex-direction: column; /* Stack elements vertically on medium screens */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
 
     .header__navbar {
-        width: 100%; /* Make navbar full width */
-        justify-content: space-around; /* Distribute space evenly */
+        width: 100%;
+        justify-content: space-around;
     }
 
     .search-bar {
-        margin-top: 20px; /* Add some space above the search bar */
+        margin-top: 20px;
     }
 
     .post {
-        width: 85%; /* Keep posts relatively wide */
-        margin: 20px 0; /* Increase margin */
+        width: 85%;
+        margin: 20px 0;
     }
 }
 

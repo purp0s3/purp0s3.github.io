@@ -434,8 +434,6 @@
         font-weight: var(--font-semi);
         padding: 2rem 0;
         position: relative;
-        bottom: 0;
-        width: 100%;
     }
 
     .footer__title {

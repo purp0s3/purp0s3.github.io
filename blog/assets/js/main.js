@@ -5,11 +5,11 @@ function performSearch() {
     const posts = document.querySelectorAll(".post");
 
     posts.forEach(post => {
-        const title = post.querySelector("h3").innerText.toLowerCase();
+        const title = post.querySelector("a").innerText.toLowerCase();
         if (title.includes(searchTerm)) {
-            post.style.display = ""; // Show post
+            post.style.display = "";
         } else {
-            post.style.display = "none"; // Hide post
+            post.style.display = "none";
         }
     });
 }
