@@ -1,0 +1,178 @@
+.wip {
+    color: #090;
+    align-self: center;
+}
+
+.stuff-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px;
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+    width: 95vw;
+    overflow-y: scroll;
+}
+
+.stuff-item {
+    border: 2px solid #090;
+    padding: 20px 30px 20px 30px;
+    text-align: center;
+}
+
+.stuff-item img {
+    max-height: 377px;
+    transition: transform .5s;
+    transform-origin: top;
+}
+
+.stuff-item img:hover {
+    transform: scale(1.2);
+}
+
+.stuff-item p {
+    font-size: 1.1em;
+    line-height: 25px;
+}
+
+.stuff-item a {
+    color: #090;
+    font-weight: bold;
+}
+
+.stuff-item a:hover {
+    color: #060;
+}
+
+
+/* iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 429px) {
+    .wip {
+        font-size: 1em;
+    }
+
+    .stuff-container {
+        gap: 35px 5px;
+        height: 60vh;
+        width: 97vw;
+    }
+
+    .stuff-item {
+        padding: 5px;
+    }
+
+    .stuff-item img {
+        max-height: 100px;
+    }
+
+    .stuff-item img:hover {
+        transform: none;
+    }
+
+    .stuff-item p {
+        font-size: 0.88em;
+        line-height: 20px;
+    }
+
+    .stuff-item h2 {
+        font-size: 1em;
+    }
+}
+
+
+/* General Phones */
+@media only screen and (min-width: 430px) and (max-width: 767px) {
+    .wip {
+        font-size: 1em;
+    }
+
+    .stuff-container {
+        gap: 35px 5px;
+        height: 62vh;
+        width: 97vw;
+    }
+
+    .stuff-item {
+        padding: 5px;
+    }
+
+    .stuff-item img {
+        max-height: 115px;
+    }
+
+    .stuff-item img:hover {
+        transform: none;
+    }
+
+    .stuff-item p {
+        font-size: 0.88em;
+        line-height: 20px;
+    }
+
+    .stuff-item h2 {
+        font-size: 1em;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .stuff-container {
+        gap: 15px 10px;
+        height: 77vh;
+        width: 97vw;
+    }
+
+    .stuff-item {
+        padding: 10px;
+    }
+
+    .stuff-item img {
+        max-height: 200px;
+    }
+
+    .stuff-item img:hover {
+        transform: none;
+    }
+
+    .stuff-item p {
+        font-size: 1em;
+        line-height: 25px;
+    }
+
+    .stuff-item h2 {
+        font-size: 1.2em;
+    }
+}
+
+
+/* Large Tablets */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .stuff-container {
+        gap: 15px 10px;
+        height: 77vh;
+        width: 97vw;
+    }
+
+    .stuff-item {
+        padding: 10px;
+    }
+
+    .stuff-item img {
+        max-height: 277px;
+    }
+
+    .stuff-item img:hover {
+        transform: none;
+    }
+
+    .stuff-item p {
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+
+    .stuff-item h2 {
+        font-size: 1.4em;
+    }
+}
