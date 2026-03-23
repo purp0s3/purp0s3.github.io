@@ -1,0 +1,115 @@
+.wip {
+    color: #090;
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    position: fixed;
+    top: 18vh;
+    align-items: center;
+    -webkit-box-align: center;
+    justify-content: center;
+    -webkit-box-direction: center;
+    -webkit-box-pack: center;
+    padding: 42px;
+    width: 100%;
+    z-index: 1;
+}
+
+.skills .text {
+    margin-top: 1dvh;
+    text-align: left;
+}
+
+.skills .text a {
+    color: #000;
+    font-weight: normal;
+}
+
+.skills .text h2 {
+    margin-top: 10px;
+}
+
+
+/* iPhone Retina */
+@media only screen and (min-width: 320px) and (max-width: 429px) {
+    .skills {
+        left: 0;
+        height: 20vh;
+    }
+
+    .skills .text {
+        position: fixed;
+        left: 1vw;
+        right: 1vw;
+        font-size: 0.5em;
+        margin-top: 42vh;
+    }
+
+    .skills .text h2 {
+        font-size: 1rem;
+    }
+}
+
+
+/* General Phones */
+@media only screen and (min-width: 430px) and (max-width: 767px) {
+    .skills {
+        left: 0;
+        height: 20vh;
+    }
+
+    .skills .text {
+        position: fixed;
+        left: 1vw;
+        right: 1vw;
+        font-size: 0.7em;
+        margin-top: 42vh;
+    }
+
+    .skills .text h2 {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .skills {
+        left: 0;
+        height: 20vh;
+    }
+
+    .skills .text {
+        position: fixed;
+        left: 1vw;
+        right: 1vw;
+        font-size: 1em;
+        margin-top: 42vh;
+    }
+
+    .skills .text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Large Tablets */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .skills {
+        left: 0;
+        height: 20vh;
+    }
+
+    .skills .text {
+        position: fixed;
+        left: 1vw;
+        right: 1vw;
+        font-size: 1.4em;
+        margin-top: 42vh;
+    }
+
+    .skills .text h2 {
+        font-size: 2rem;
+    }
+}
