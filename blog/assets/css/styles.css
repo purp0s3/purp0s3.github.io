@@ -318,7 +318,64 @@ footer {
     }
 }
 
-/* dark mode */
-    @media (prefers-color-scheme:dark) {
+/* --- no results --- */
+#no-results {
+    display: none;
+    text-align: center;
+    color: #999;
+    font-size: 18px;
+    margin-top: 40px;
+}
 
+/* --- focus indicators --- */
+*:focus-visible {
+    outline: 2px solid var(--first-color);
+    outline-offset: 2px;
+}
+
+/* dark mode */
+@media (prefers-color-scheme:dark) {
+    body {
+        background-color: #0a0a0a;
+        color: #e0e0e0;
     }
+
+    header {
+        background-color: #111;
+    }
+
+    .post {
+        background-color: #1a1a1a;
+        border-color: #333;
+    }
+
+    .post h2 a {
+        color: #e0e0e0;
+    }
+
+    .post p {
+        color: #c0c0c0;
+    }
+
+    .post-post {
+        color: #d0d0d0;
+    }
+
+    .post-post p {
+        color: #d0d0d0;
+    }
+
+    footer {
+        background-color: #111;
+    }
+
+    .search-bar input {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        border-color: #444;
+    }
+
+    #no-results {
+        color: #777;
+    }
+}
