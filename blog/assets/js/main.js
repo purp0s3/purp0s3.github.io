@@ -1,7 +1,7 @@
 function performSearch() {
     const searchTerm = document.getElementById("search-input").value.toLowerCase();
     const posts = document.querySelectorAll(".post");
-    var visible = 0;
+    let visible = 0;
 
     posts.forEach(post => {
         const title = post.querySelector("a").innerText.toLowerCase();
@@ -13,7 +13,7 @@ function performSearch() {
         }
     });
 
-    var noResults = document.getElementById("no-results");
+    const noResults = document.getElementById("no-results");
     if (noResults) {
         noResults.style.display = visible === 0 ? "block" : "none";
     }
