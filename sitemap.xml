@@ -40,4 +40,28 @@
     <loc>https://purp0s3.com/assets/html/en/pop/randompicture.html</loc>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/es/pop/brinks.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/es/pop/dummypdm.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/es/pop/randompicture.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/pt/pop/brinks.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/pt/pop/dummypdm.html</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://purp0s3.com/assets/html/pt/pop/randompicture.html</loc>
+    <priority>0.4</priority>
+  </url>
 </urlset>
