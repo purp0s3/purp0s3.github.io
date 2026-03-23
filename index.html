@@ -15,10 +15,31 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css">
         
-        <title>purp0s3</title>
+        <meta name="description" content="Lucas Nascimento - Developer portfolio showcasing projects in Java, Swift, JavaScript and more. Based in São Paulo, Brazil.">
+        <meta property="og:title" content="purp0s3 - Lucas Nascimento">
+        <meta property="og:description" content="Developer portfolio and blog">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://purp0s3.com">
+        <meta name="twitter:card" content="summary">
+
+        <title>purp0s3 - Lucas Nascimento | Developer Portfolio</title>
+
+        <script>
+        (function() {
+            var chosen = localStorage.getItem('purp0s3-lang');
+            if (chosen) return;
+            var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            if (lang.startsWith('pt')) {
+                window.location.replace('assets/html/pt/index.html');
+            } else if (lang.startsWith('es')) {
+                window.location.replace('assets/html/es/index.html');
+            }
+        })();
+        </script>
     </head>
 
     <body>
+        <a href="#home" class="skip-link">Skip to content</a>
         <header class="l-header">
         <!--- header --->
             <nav class="nav bd-grid">
@@ -34,8 +55,8 @@
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
                         <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
                         <li class="nav__item"><a href="blog/assets/html/en/index.html" class="nav__link">Blog</a></li>
-                        <li class="nav__item"><a href="assets/html/pt/index.html" class="nav__link"><img src="assets/img/brazil.png" alt="Brazilian flag"></a></li>
-                        <li class="nav__item"><a href="assets/html/es/index.html" class="nav__link"><img src="assets/img/spain.png" alt="Spanish flag"></a></li>
+                        <li class="nav__item"><a href="assets/html/pt/index.html" class="nav__link" aria-label="Mudar para Português" onclick="localStorage.setItem('purp0s3-lang','pt')"><img src="assets/img/brazil.png" alt="Brazilian flag"></a></li>
+                        <li class="nav__item"><a href="assets/html/es/index.html" class="nav__link" aria-label="Cambiar a Español" onclick="localStorage.setItem('purp0s3-lang','es')"><img src="assets/img/spain.png" alt="Spanish flag"></a></li>
                     </ul>
                 </div>
 
@@ -56,8 +77,8 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/purp0s3/" target="_blank" class="home__social-icon"><i class="bx bxl-github"></i></a>
+                    <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" rel="noopener noreferrer" class="home__social-icon"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://github.com/purp0s3/" target="_blank" rel="noopener noreferrer" class="home__social-icon"><i class="bx bxl-github"></i></a>
                 </div>
 
                 <div class="home__img">
@@ -349,28 +370,28 @@
                         <p>source & demo</p>
                     </a>
 
-                    <a href="https://www.figma.com/file/uwizIy4sS7QuZMPBivPY7I/COMP?type=design&node-id=0-1&mode=design" target="_blank" class="portfolio__img">
+                    <a href="https://www.figma.com/file/uwizIy4sS7QuZMPBivPY7I/COMP?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener noreferrer" class="portfolio__img">
                         <img src="assets/img/portfolio/COMP-img.png" alt="Figma app prototype and it's pages">
                         <p><b>COMP<br>a Figma iOS app prototype</b></p>
                         <p>built using <b>Figma</b></p>
                         <p>source & demo</p>
                     </a>
 
-                    <a href="https://www.figma.com/file/jMv5JyVLP6Hx7D2XWqnzQm/DengueZer%40?type=design&node-id=0-1&mode=design" target="_blank" class="portfolio__img">
+                    <a href="https://www.figma.com/file/jMv5JyVLP6Hx7D2XWqnzQm/DengueZer%40?type=design&node-id=0-1&mode=design" target="_blank" rel="noopener noreferrer" class="portfolio__img">
                         <img src="assets/img/portfolio/DengueZer@-img.png" alt="Figma app prototype and it's pages">
                         <p><b>DengueZer@<br>a Figma iOS app prototype</b></p>
                         <p>built using <b>Figma</b></p>
                         <p>source & demo</p>
                     </a>
 
-                    <a href="https://github.com/purp0s3/Tweaked-iOS-Apps" target="_blank" class="portfolio__img">
+                    <a href="https://github.com/purp0s3/Tweaked-iOS-Apps" target="_blank" rel="noopener noreferrer" class="portfolio__img">
                         <img src="assets/img/portfolio/Tweaked iOS Apps-img.png" alt="homepage of the repository">
                         <p><b>Tweaked iOS Apps<br>Tweaks injected into iOS apps</b></p>
                         <p>built using <b>HTML, Markdown, Azule</b> and <b>Theos</b></p>
                         <p>source</p>
                     </a>
 
-                    <a href="v1/index.html" target="_blank" class="portfolio__img">
+                    <a href="v1/index.html" target="_blank" rel="noopener noreferrer" class="portfolio__img">
                         <img src="assets/img/portfolio/purp0s3-img.png" alt="homepage of this website's old version">
                         <p><b>purp0s3.com<br>this website's old version</b></p>
                         <p>built using <b>HTML</b> and <b>CSS</b></p>
@@ -398,7 +419,7 @@
                         <p>2020 - 2021 (drop out)</p>
                     </a>
 
-                    <a class="education__img" href="v1/stuff/imgs/ILAC diploma.png" target="_blank">
+                    <a class="education__img" href="v1/stuff/imgs/ILAC diploma.png" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/ILAC.jpeg" alt="ILAC School logo">
                         <p><b>English Proficiency Course<br>High-Advanced (C1)</b></p>
                         <p><b>ILAC @ Toronto</b></p>
@@ -419,15 +440,15 @@
         <footer class="footer">
             <p class="footer__title">purp0s3</p>
             <div class="footer__social">
-                <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://github.com/purp0s3/" target="_blank" class="footer__icon"><i class="bx bxl-github"></i></a>
+                <a href="https://www.linkedin.com/in/purp0s3/" target="_blank" rel="noopener noreferrer" class="footer__icon"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://github.com/purp0s3/" target="_blank" rel="noopener noreferrer" class="footer__icon"><i class="bx bxl-github"></i></a>
                 <a href="mailto:purp0s3@icloud.com" class="footer__icon"><i class="bx bx-mail-send"></i></a>
             </div>
-            <p class="footer__copy">&#169; 2025, Lucas Nascimento.<br>All rights reserved.</p>
+            <p class="footer__copy">&#169; 2026, Lucas Nascimento.<br>All rights reserved.</p>
         </footer>
 
         <!--- scroll reveal animation --->
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
 
         <!--- javascript --->
         <script src="assets/js/main.js"></script>

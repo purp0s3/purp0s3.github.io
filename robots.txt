@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://purp0s3.com/sitemap.xml
